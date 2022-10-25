@@ -1,7 +1,7 @@
 body {
   // background: #e1e7ec;
   background: #dfe7ef;
-  font-family: "Bitter", serif;
+  font-family: Helvetica, serif;
 }
 
 * {
@@ -289,7 +289,7 @@ body {
   padding-right: 60px;
   user-select: none;
 
-  @media screen and (max-width: 576px), (max-height: 500px)  {
+  @media screen and (max-width: 576px), (max-height: 500px) {
     padding-right: 30px;
   }
 
@@ -309,7 +309,7 @@ body {
     opacity: 0.7;
     line-height: 1.3em;
     min-height: 52px;
-    @media screen and (max-width: 576px), (max-height: 500px)  {
+    @media screen and (max-width: 576px), (max-height: 500px) {
       font-size: 18px;
       min-height: 50px;
     }
@@ -329,7 +329,7 @@ body {
   font-weight: bold;
   letter-spacing: 1px;
   font-size: 16px;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 
   @media screen and (min-width: 500px) {
     &:hover {
@@ -354,13 +354,13 @@ body {
 //scale out
 
 .scale-out-enter-active {
-  transition: all .35s ease-in-out;
+  transition: all 0.35s ease-in-out;
 }
 .scale-out-leave-active {
-  transition: all .35s ease-in-out;
+  transition: all 0.35s ease-in-out;
 }
 .scale-out-enter {
-  transform: scale(.55);
+  transform: scale(0.55);
   pointer-events: none;
   opacity: 0;
 }
@@ -370,14 +370,13 @@ body {
   opacity: 0;
 }
 
-
 //scale in
 
 .scale-in-enter-active {
-  transition: all .35s ease-in-out;
+  transition: all 0.35s ease-in-out;
 }
 .scale-in-leave-active {
-  transition: all .35s ease-in-out;
+  transition: all 0.35s ease-in-out;
 }
 .scale-in-enter {
   transform: scale(1.2);
@@ -385,7 +384,7 @@ body {
   opacity: 0;
 }
 .scale-in-leave-to {
-  transform: scale(.55);
+  transform: scale(0.55);
   pointer-events: none;
   opacity: 0;
 }
