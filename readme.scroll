@@ -1,6 +1,7 @@
 # Music Of A People
 
-## a new music label from <a href="https://PublicDomainCompany.com">PublicDomainCompany.com</a>
+## a new music label from PublicDomainCompany.com
+ https://PublicDomainCompany.com PublicDomainCompany.com
 
 ? Who do we prioritize?
 
@@ -9,15 +10,12 @@
 * ...
 * ...
 * ...
-* ...
-* EndOfList. Investors
+* N. Investors
 
 ? What do we believe?
 
 * We believe in the power of sound.
 * We believe in artists.
-* We believe that ideas liberate us.
- https://www.youtube.com/watch?v=CYPYZnVQoLg liberate us
 * We believe music should be shared with no (c)hains attached.
 * We believe concerts are better than recordings.
 * We believe vinyl is better than digital.
@@ -38,4 +36,4 @@ viewSourceBaseUrl https://github.com/breck7/MusicOfAPeople.com/blob/main
 twitter https://twitter.com/breckyunits
 email musicofapeople@publicdomaincompany.com
 baseUrl https://musicofapeople.com/
-permalink index.html
+permalink about.html
