@@ -10,13 +10,21 @@ new Vue({
       isTimerPlaying: false,
       tracks: [
         {
-          name: "Phrygia",
-          artist: "Shlok Joshi",
+          name: "All On My Line",
+          artist: "Revenue Hefner",
           cover: "./img/5.jpg",
-          source: "./mp3/Phrygia.mp3",
-          url: "https://youtu.be/lCT3Zgxy02U",
+          source: "./mp3/all on my line.mp3",
+          url: "",
           favorited: false
         },
+        {
+          name: "Pushin' On Foot",
+          artist: "Revenue Hefner",
+          cover: "./img/7.jpg",
+          source: "./mp3/Pushin On Foot.m4a",
+          url: "",
+          favorited: false
+        }
       ],
       currentTrack: null,
       currentTrackIndex: 0,
