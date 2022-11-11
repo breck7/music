@@ -1,92 +1,114 @@
 /* poppins-200 - latin */
 @font-face {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 200;
-  src: url('../fonts/poppins-v20-latin-200.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/poppins-v20-latin-200.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/poppins-v20-latin-200.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/poppins-v20-latin-200.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/poppins-v20-latin-200.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/poppins-v20-latin-200.svg#Poppins') format('svg'); /* Legacy iOS */
+  src: url("../fonts/poppins-v20-latin-200.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/poppins-v20-latin-200.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/poppins-v20-latin-200.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/poppins-v20-latin-200.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../fonts/poppins-v20-latin-200.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("../fonts/poppins-v20-latin-200.svg#Poppins")
+      format("svg"); /* Legacy iOS */
 }
 /* poppins-300 - latin */
 @font-face {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 300;
-  src: url('../fonts/poppins-v20-latin-300.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/poppins-v20-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/poppins-v20-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/poppins-v20-latin-300.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/poppins-v20-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/poppins-v20-latin-300.svg#Poppins') format('svg'); /* Legacy iOS */
+  src: url("../fonts/poppins-v20-latin-300.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/poppins-v20-latin-300.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/poppins-v20-latin-300.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/poppins-v20-latin-300.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../fonts/poppins-v20-latin-300.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("../fonts/poppins-v20-latin-300.svg#Poppins")
+      format("svg"); /* Legacy iOS */
 }
 /* poppins-regular - latin */
 @font-face {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/poppins-v20-latin-regular.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/poppins-v20-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/poppins-v20-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/poppins-v20-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/poppins-v20-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/poppins-v20-latin-regular.svg#Poppins') format('svg'); /* Legacy iOS */
+  src: url("../fonts/poppins-v20-latin-regular.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/poppins-v20-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/poppins-v20-latin-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/poppins-v20-latin-regular.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../fonts/poppins-v20-latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../fonts/poppins-v20-latin-regular.svg#Poppins") format("svg"); /* Legacy iOS */
 }
 /* poppins-500 - latin */
 @font-face {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
-  src: url('../fonts/poppins-v20-latin-500.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/poppins-v20-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/poppins-v20-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/poppins-v20-latin-500.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/poppins-v20-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/poppins-v20-latin-500.svg#Poppins') format('svg'); /* Legacy iOS */
+  src: url("../fonts/poppins-v20-latin-500.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/poppins-v20-latin-500.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/poppins-v20-latin-500.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/poppins-v20-latin-500.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../fonts/poppins-v20-latin-500.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("../fonts/poppins-v20-latin-500.svg#Poppins")
+      format("svg"); /* Legacy iOS */
 }
 /* poppins-700 - latin */
 @font-face {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
-  src: url('../fonts/poppins-v20-latin-700.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/poppins-v20-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/poppins-v20-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/poppins-v20-latin-700.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/poppins-v20-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/poppins-v20-latin-700.svg#Poppins') format('svg'); /* Legacy iOS */
+  src: url("../fonts/poppins-v20-latin-700.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/poppins-v20-latin-700.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/poppins-v20-latin-700.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/poppins-v20-latin-700.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../fonts/poppins-v20-latin-700.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("../fonts/poppins-v20-latin-700.svg#Poppins")
+      format("svg"); /* Legacy iOS */
 }
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-*::before, *::after{
+*::before,
+*::after {
   padding: 0;
   margin: 0;
 }
-:root{
-  --red: #DB3A34;
-  --aeroblue: #B5FFE9;
-  --turk: #2FE6DE;
-  --opal: #C5E0D8;
+:root {
+  --red: #db3a34;
+  --aeroblue: #b5ffe9;
+  --turk: #2fe6de;
+  --opal: #c5e0d8;
   --onyx: #444545;
   --darkwhite: #cecaca;
-  --white: #FFFFFF;
-  --yellow: #F6AE2D;
-  --lightbshadow: rgba(0,0,0,0.15);
+  --white: #ffffff;
+  --yellow: #f6ae2d;
+  --lightbshadow: rgba(0, 0, 0, 0.15);
 }
-body{
+body {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   background: linear-gradient(var(--turk) 0%, var(--aeroblue) 100%);
 }
-.wrapper{
+.wrapper {
   width: 380px;
   padding: 25px 30px;
   overflow: hidden;
@@ -95,28 +117,31 @@ body{
   background: var(--white);
   box-shadow: 0px 6px 15px var(--lightbshadow);
 }
-.wrapper i{
+.wrapper i {
   cursor: pointer;
 }
-.top-bar, .progress-area .song-timer,
-.controls, .music-list .header, .music-list ul li{
+.top-bar,
+.progress-area .song-timer,
+.controls,
+.music-list .header,
+.music-list ul li {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.top-bar i{
+.top-bar i {
   font-size: 30px;
   color: var(--onyx);
 }
-.top-bar i:first-child{
+.top-bar i:first-child {
   margin-left: -7px;
 }
-.top-bar span{
+.top-bar span {
   font-size: 18px;
   margin: auto;
   color: var(--lightblack);
 }
-.img-area{
+.img-area {
   width: 100%;
   height: 256px;
   overflow: hidden;
@@ -124,41 +149,42 @@ body{
   border-radius: 15px;
   box-shadow: 0px 6px 12px var(--lightbshadow);
 }
-.img-area img{
+.img-area img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.song-details{
+.song-details {
   text-align: center;
   margin: 30px 0;
 }
-.song-details p{
+.song-details p {
   color: var(--lightblack);
 }
-.song-details .name{
+.song-details .name {
   font-size: 21px;
+  text-decoration: none;
 }
-.song-details .artist{
+.song-details .artist {
   font-size: 18px;
   opacity: 0.9;
   line-height: 35px;
 }
-.progress-area{
+.progress-area {
   height: 6px;
   width: 100%;
   border-radius: 50px;
   background: #f0f0f0;
   cursor: pointer;
 }
-.progress-area .progress-bar{
+.progress-area .progress-bar {
   height: inherit;
   width: 0%;
   position: relative;
   border-radius: inherit;
   background: linear-gradient(90deg, var(--onyx) 0%, var(--turk) 100%);
 }
-.progress-bar::before{
+.progress-bar::before {
   content: "";
   position: absolute;
   height: 12px;
@@ -173,21 +199,21 @@ body{
   background: var(--onyx);
   transition: opacity 0.2s ease;
 }
-.progress-area:hover .progress-bar::before{
+.progress-area:hover .progress-bar::before {
   opacity: 1;
   pointer-events: auto;
 }
-.progress-area .song-timer{
+.progress-area .song-timer {
   margin-top: 2px;
 }
-.song-timer span{
+.song-timer span {
   font-size: 13px;
   color: var(--lightblack);
 }
-.controls{
+.controls {
   margin: 40px 0 5px 0;
 }
-.controls i{
+.controls i {
   font-size: 28px;
   user-select: none;
   background: var(--onyx);
@@ -196,16 +222,16 @@ body{
   -webkit-text-fill-color: transparent;
 }
 .controls i:nth-child(2),
-.controls i:nth-child(4){
+.controls i:nth-child(4) {
   font-size: 43px;
 }
-.controls #prev{
+.controls #prev {
   margin-right: -13px;
 }
-.controls #next{
+.controls #next {
   margin-left: -13px;
 }
-.controls .play-pause{
+.controls .play-pause {
   height: 54px;
   width: 54px;
   display: flex;
@@ -216,7 +242,7 @@ body{
   background: var(--onyx);
   box-shadow: 0px 0px 5px var(--pink);
 }
-.play-pause::before{
+.play-pause::before {
   position: absolute;
   content: "";
   height: 43px;
@@ -224,7 +250,7 @@ body{
   border-radius: inherit;
   background: linear-gradient(var(--white) 0%, var(--white) 100%);
 }
-.play-pause i{
+.play-pause i {
   height: 43px;
   width: 43px;
   line-height: 43px;
@@ -236,7 +262,7 @@ body{
   position: absolute;
 }
 
-.music-list{
+.music-list {
   position: absolute;
   background: var(--white);
   width: 100%;
@@ -247,60 +273,60 @@ body{
   z-index: 5;
   padding: 15px 30px;
   border-radius: 15px;
-  box-shadow: 0px -5px 10px rgba(0,0,0,0.1);
+  box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.15s ease-out;
 }
-.music-list.show{
+.music-list.show {
   bottom: 0;
   opacity: 1;
   pointer-events: auto;
 }
-.header .row{
+.header .row {
   display: flex;
   align-items: center;
   font-size: 19px;
   color: var(--lightblack);
 }
-.header .row i{
+.header .row i {
   cursor: default;
 }
-.header .row span{
+.header .row span {
   margin-left: 5px;
 }
-.header #close{
+.header #close {
   font-size: 22px;
   color: var(--lightblack);
 }
-.music-list ul{
+.music-list ul {
   margin: 10px 0;
   max-height: 260px;
   overflow: auto;
 }
-.music-list ul::-webkit-scrollbar{
+.music-list ul::-webkit-scrollbar {
   width: 0px;
 }
-.music-list ul li{
+.music-list ul li {
   list-style: none;
   display: flex;
   cursor: pointer;
   padding-bottom: 10px;
   margin-bottom: 5px;
   color: var(--lightblack);
-  border-bottom: 1px solid #E5E5E5;
+  border-bottom: 1px solid #e5e5e5;
 }
-.music-list ul li:last-child{
+.music-list ul li:last-child {
   border-bottom: 0px;
 }
-.music-list ul li .row span{
+.music-list ul li .row span {
   font-size: 17px;
 }
-.music-list ul li .row p{
+.music-list ul li .row p {
   opacity: 0.9;
 }
-ul li .audio-duration{
+ul li .audio-duration {
   font-size: 16px;
 }
-ul li.playing{
+ul li.playing {
   pointer-events: none;
   color: var(--yellow);
 }
