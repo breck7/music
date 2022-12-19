@@ -106,7 +106,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: linear-gradient(var(--turk) 0%, var(--onyx) 100%);
+  background: linear-gradient(var(--white) 0%, var(--onyx) 100%);
 }
 .wrapper {
   width: 380px;
@@ -182,7 +182,7 @@ body {
   width: 0%;
   position: relative;
   border-radius: inherit;
-  background: linear-gradient(90deg, var(--onyx) 0%, var(--turk) 100%);
+  background: linear-gradient(90deg, var(--onyx) 0%, var(--darkwhite) 100%);
 }
 .progress-bar::before {
   content: "";
@@ -340,7 +340,7 @@ ul li.playing {
 }
 
 a {
-  color: var(--turk);
+  color: var(--darkwhite);
 }
 
 a:visited {

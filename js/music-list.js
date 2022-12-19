@@ -67,10 +67,110 @@ let allMusic = [
     src: "Beauz&Jvna_Crazy",
   },
   // like this paste it and remember to give comma after ending of this bracket }
+  {
+    name: "LemonHead",
+    original: "https://www.youtube.com/watch?v=cjYDPGrfdDM",
+    artist: "Scotty2Yachty",
+    img: "LemonHead",
+    src: "Lemonhead"
+  },
+  {
+    name: "Enjoy the Silence - Samuele Scelfo Edit",
+    original: "https://www.youtube.com/watch?v=xgcLwtGlgLU",
+    artist: "Unconventional",
+    img: "EnjoyTheSilence",
+    src: "EnjoyTheSilence"
+  },
+  {
+    name: "No Plans",
+    original: "https://www.youtube.com/watch?v=gWHx0x8KD0E",
+    artist: "Justin Ransom",
+    img: "No Plans",
+    src: "No Plans"
+  },
+  {
+    name: "Lofi Girl",
+    original: "https://www.youtube.com/watch?v=2mHgdptQaMY",
+    artist: "David E Beats",
+    img: "Lofi Girl",
+    src: "Lofi girl"
+  },
+  {
+    name: "Dreams",
+    original: "https://www.youtube.com/watch?v=6Pm1FVPA_T8",
+    artist: "Mr. Yohan",
+    img: "Dreams",
+    src: "Dreams"
+  },
+  {
+    name: "Egypt",
+    original: "https://www.youtube.com/watch?v=RGwSak0n-Fw",
+    artist: "Mr. Yohan",
+    img: "Egypt",
+    src: "Egypt"
+  },
+  {
+    name: "Nigeria",
+    original: "https://www.youtube.com/watch?v=beXj_dRjT8Q",
+    artist: "Mr. Yohan",
+    img: "Nigeria",
+    src: "Nigeria"
+  },
+  {
+    name: "Coffee Shop",
+    original: "https://www.youtube.com/watch?v=Dk1AviaKr8c",
+    artist: "Mr. Yohan",
+    img: "Coffee Shop",
+    src: "Coffee Shop"
+  }
   // {
   //   name: "Here is the music name",
+  //   original: "https://www.youtube.com/watch?v=xgcLwtGlgLU",
   //   artist: "Here is the artist name",
   //   img: "image name here - remember img must be in .jpg formate and it's inside the images folder of this project folder",
   //   src: "music name here - remember img must be in .mp3 formate and it's inside the songs folder of this project folder"
   // }
+  // {
+  //   name: "Here is the music name",
+  //   original: "https://www.youtube.com/watch?v=xgcLwtGlgLU",
+  //   artist: "Here is the artist name",
+  //   img: "image name here - remember img must be in .jpg formate and it's inside the images folder of this project folder",
+  //   src: "music name here - remember img must be in .mp3 formate and it's inside the songs folder of this project folder"
+  // }
+  // {
+  //   name: "Here is the music name",
+  //   original: "https://www.youtube.com/watch?v=xgcLwtGlgLU",
+  //   artist: "Here is the artist name",
+  //   img: "image name here - remember img must be in .jpg formate and it's inside the images folder of this project folder",
+  //   src: "music name here - remember img must be in .mp3 formate and it's inside the songs folder of this project folder"
+  // }
+  // {
+  //   name: "Here is the music name",
+  //   original: "https://www.youtube.com/watch?v=xgcLwtGlgLU",
+  //   artist: "Here is the artist name",
+  //   img: "image name here - remember img must be in .jpg formate and it's inside the images folder of this project folder",
+  //   src: "music name here - remember img must be in .mp3 formate and it's inside the songs folder of this project folder"
+  // }
+  // {
+  //   name: "Here is the music name",
+  //   original: "https://www.youtube.com/watch?v=xgcLwtGlgLU",
+  //   artist: "Here is the artist name",
+  //   img: "image name here - remember img must be in .jpg formate and it's inside the images folder of this project folder",
+  //   src: "music name here - remember img must be in .mp3 formate and it's inside the songs folder of this project folder"
+  // }  // {
+    //   name: "Here is the music name",
+    //   original: "https://www.youtube.com/watch?v=xgcLwtGlgLU",
+    //   artist: "Here is the artist name",
+    //   img: "image name here - remember img must be in .jpg formate and it's inside the images folder of this project folder",
+    //   src: "music name here - remember img must be in .mp3 formate and it's inside the songs folder of this project folder"
+    // }
+    // {
+    //   name: "Here is the music name",
+    //   original: "https://www.youtube.com/watch?v=xgcLwtGlgLU",
+    //   artist: "Here is the artist name",
+    //   img: "image name here - remember img must be in .jpg formate and it's inside the images folder of this project folder",
+    //   src: "music name here - remember img must be in .mp3 formate and it's inside the songs folder of this project folder"
+    // }
+
+
 ];
