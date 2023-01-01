@@ -1,7 +1,11 @@
-# Music Of A People
+import header.scroll
+title Music Of A People
+permalink about.html
 
-## a new music label from PublicDomainCompany.com
- https://PublicDomainCompany.com PublicDomainCompany.com
+startColumns 2
+
+## a new music label from Public Domain Publishing Inc.
+ https://PublicDomainCompany.com Public Domain Publishing Inc.
 
 ? Who do we prioritize?
 
@@ -16,30 +20,21 @@
 
 * We believe in music.
 * We believe in artists.
-* We believe concerts are better than recordings.
+* We believe music is best experienced live.
 * We believe vinyl is better than digital.
-* We believe music should be shared with no (c)hains attached.
+* We believe digital music should have no (c)hains attached.
 
 ? How do I make music for Music of a People?
 
-* Email us or send a pull request with your public domain songs.
-* If we think you're good enough, we'll reply with an offer and/or we'll accept the pull request. If we think you're not good enough yet, we'll let you know.
-* We won't sign you to any long term deals and since your work is public domain you can do whatever the fuck you want with it.
-* We'll pay you what you need to focus and do your best work.
-* We will put on concerts, sell the highest quality vinyl records and sell some merchandise and we'll take 28.3% and you keep the rest.
-* We will not sell mp3s or use any kind of DRM — fans come first and no fans want that. We will make money together in the real world. Digital is just for spreading the word about who you are and your sound.
+* Email us with your public domain songs.
+* If we love them we'll reply with a one time offer. We may even offer to pay for a few months so you can focus on doing your best work. We'll let you know either way.
+* We don't believe in exclusive deals and since your files are public domain you can do whatever the fuck you want with them.
+* In the future, we may help you put on concerts, sell the highest quality vinyl records and sell some merchandise and we'll take 28.3% and you keep the rest.
+* We will not sell mp3s or use any kind of DRM — fans come first and no fans want that. We want to make money together in the real world. Digital is just for spreading the word about you and your music.
 
 ? Do we have a blog?
 
 * Yes.
- link blog/
+ link blog/ Yes
 
-
-siteTitle Music of a People
-siteDescription a new music label from PublicDomainCompany.com
-github https://github.com/breck7/MusicOfAPeople.com
-viewSourceBaseUrl https://github.com/breck7/MusicOfAPeople.com/blob/main
-twitter https://twitter.com/breckyunits
-email musicofapeople@publicdomaincompany.com
-baseUrl https://musicofapeople.com/
-permalink about.html
+scrollFooter

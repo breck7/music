@@ -1,9 +1,10 @@
+import header.scroll
 title La La Land Script
 date 2022/11/17
+groups index
 author https://www.instagram.com/breck7/ Breck Yunits
 
-maxColumns 1
-columnWidth 60
+startColumns 2
 
 * I'm selling my copy of the _La La Land_ script signed by Emma Stone and Ryan Gosling. 100% of proceeds will go to Cancer Research and 100% of proceeds will go to paying artists to create public domain mp3s for this website, MusicOfAPeople.com.
  dateline
@@ -13,15 +14,16 @@ columnWidth 60
  https://www.imdb.com/name/nm0331516/ Ryan Gosling
  https://www.imdb.com/title/tt3783958/ La La Land
 
-
 ? Wait, doesn't that add up to 200%?
 
 * Yes. I will personally provide the matching funds.
 
-# La La Land tied for the most nominated movie in Oscar History (14 nominations, 7 wins)
+# La La Land tied for the most nominated movie in Oscar History (14 nominations, 6 wins)
 
 html
- <iframe width="426" height="239" src="https://www.youtube.com/embed/8KeOxeuiZjs" title="'Moonlight' or 'La La Land'? Best Picture Mix-up at Oscars" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+ <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/8KeOxeuiZjs" title="'Moonlight' or 'La La Land'? Best Picture Mix-up at Oscars" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ </div>
 
 * Bid for it on eBay or buy it instantly by sending $14,000 of NEAR to `cancerdb.near` or `musicofapeople.near`.
  https://wallet.near.org/ NEAR
@@ -36,5 +38,4 @@ image lalaBack.jpg
 image lalaUpdated.jpg
  caption When you own it you too can write whatever you want in it.
 
-groups index
-import settings.scroll
+scrollFooter

@@ -1,0 +1,15 @@
+importOnly
+git https://github.com/breck7/MusicOfAPeople.com
+viewSourceBaseUrl https://github.com/breck7/MusicOfAPeople.com/blob/main/blog/
+email artists@musicofapeople.com
+baseUrl https://musicofapeople.com/blog/
+scrollCssTag
+scrollHeader
+
+css
+ img {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  border-radius: 10px;
+  margin-top: 20px;
+ }

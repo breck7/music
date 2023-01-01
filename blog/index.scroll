@@ -1,2 +1,5 @@
-import settings.scroll
-template group index
+import header.scroll
+title The Music of a People Official Blog
+description a new music label from Public Domain Publishing Inc.
+snippets index
+scrollFooter
