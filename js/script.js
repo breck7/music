@@ -8,20 +8,58 @@ const wrapper = document.querySelector(".wrapper"),
   mainAudio = wrapper.querySelector("#main-audio"),
   progressArea = wrapper.querySelector(".progress-area"),
   progressBar = progressArea.querySelector(".progress-bar"),
-  musicList = wrapper.querySelector(".music-list"),
-  moreMusicBtn = wrapper.querySelector("#more-music"),
-  closemoreMusic = musicList.querySelector("#close")
+  favoriteMusicBtn = wrapper.querySelector("#favorite")
 
-let musicIndex = Math.floor(Math.random() * allMusic.length + 1)
+const localStorageKeys = {
+  favorites: "favorites",
+  playMode: "playMode",
+  currentSong: "currentSong",
+}
+
+let favorites = []
+const initFavorites = () => {
+  try {
+    // Wrap in a try/catch in case someone's browser does not support local storage
+    favorites =
+      JSON.parse(localStorage.getItem(localStorageKeys.favorites)) ?? []
+  } catch (err) {
+    console.error("Error trying to load favorites from localStorage.", err)
+  }
+}
+initFavorites()
+
+const getStartSongIndex = () => {
+  const randomIndex = Math.floor(Math.random() * allMusic.length + 1)
+  try {
+    const saved = JSON.parse(localStorage.getItem(localStorageKeys.currentSong))
+    if (saved === undefined) return randomIndex
+    const hit = allMusic.findIndex((haystack) => haystack.name === saved.name)
+    return hit > -1 ? hit : randomIndex
+  } catch (err) {
+    return randomIndex
+  }
+}
+let musicIndex = getStartSongIndex()
 isMusicPaused = true
 
-window.addEventListener("load", () => {
-  loadMusic(musicIndex)
-  playingSong()
-})
+window.addEventListener("load", () => loadMusic(musicIndex))
 
+const nowPlayingSong = () => allMusic[musicIndex]
+
+const saveCurrentSong = (song) => {
+  try {
+    localStorage.setItem(localStorageKeys.currentSong, JSON.stringify(song))
+  } catch (err) {
+    console.error("Error saving", err)
+  }
+}
 const loadMusic = (indexNumb) => {
-  const song = allMusic[indexNumb - 1]
+  if (indexNumb < 0) indexNumb = allMusic.length - 1
+
+  if (indexNumb > allMusic.length - 1) indexNumb = 0
+
+  musicIndex = indexNumb
+  const song = allMusic[indexNumb]
   musicName.innerText = song.name
   if (song.original) {
     musicName.href = song.original
@@ -34,61 +72,96 @@ const loadMusic = (indexNumb) => {
   musicArtist.innerText = song.artist
   musicImg.src = `images/${song.img}.jpg`
   mainAudio.src = `songs/${song.src}.mp3`
+  updateFavorite(song)
+  saveCurrentSong(song)
 }
 
-//play music function
+const updateFavorite = (song) =>
+  (favoriteMusicBtn.innerText = isFavorite(song)
+    ? "favorite"
+    : "thumbs_up_down")
+
 function playMusic() {
   wrapper.classList.add("paused")
   playPauseBtn.querySelector("i").innerText = "pause"
   mainAudio.play()
 }
 
-//pause music function
 function pauseMusic() {
   wrapper.classList.remove("paused")
   playPauseBtn.querySelector("i").innerText = "play_arrow"
   mainAudio.pause()
 }
 
-//prev music function
 function prevMusic() {
-  musicIndex-- //decrement of musicIndex by 1
-  //if musicIndex is less than 1 then musicIndex will be the array length so the last music play
-  musicIndex < 1 ? (musicIndex = allMusic.length) : (musicIndex = musicIndex)
+  musicIndex--
+  // todo: handle favorites play mode
   loadMusic(musicIndex)
   playMusic()
-  playingSong()
 }
 
-//next music function
 function nextMusic() {
-  musicIndex++ //increment of musicIndex by 1
-  //if musicIndex is greater than array length then musicIndex will be 1 so the first music play
-  musicIndex > allMusic.length ? (musicIndex = 1) : (musicIndex = musicIndex)
+  musicIndex++
+  if (getCurrentPlayMode() === "stars")
+    musicIndex = getNextFavorite(nowPlayingSong())
+
   loadMusic(musicIndex)
   playMusic()
-  playingSong()
 }
 
 const toggleMusic = () => {
   const isMusicPlay = wrapper.classList.contains("paused")
   //if isPlayMusic is true then call pauseMusic else call playMusic
   isMusicPlay ? pauseMusic() : playMusic()
-  playingSong()
 }
 
-// play or pause button event
+const isFavorite = (song) =>
+  favorites.some((haystack) => haystack.name === song.name)
+const toggleFavorite = (song) => {
+  if (isFavorite(song))
+    favorites = favorites.filter((someSong) => someSong.name !== song.name)
+  else favorites.push(song)
+  saveFavorites()
+  updateFavorite(song)
+}
+const getNextFavorite = (song = nowPlayingSong()) => {
+  if (!favorites.length)
+    // If there are no favorites yet, play first song.
+    return 0
+  let nextSong
+  if (!isFavorite(song))
+    // If current song is not a favorite, play first favorite
+    nextSong = favorites[0]
+  // Play the next favorite after current
+  else
+    nextSong =
+      favorites[
+        favorites.findIndex((haystack) => haystack.name === song.name) + 1
+      ]
+  if (!nextSong)
+    // If this is the last favorite, play the first favorite
+    nextSong = favorites[0]
+  return allMusic.findIndex((haystack) => haystack.name === nextSong.name) || 0 // Now return the index from the catalog, or play the first song.
+}
+const saveFavorites = () => {
+  try {
+    localStorage.setItem(localStorageKeys.favorites, JSON.stringify(favorites))
+  } catch (err) {
+    console.error("Error saving favorites", err)
+  }
+}
+
 playPauseBtn.addEventListener("click", () => toggleMusic())
-
-//prev music button event
 prevBtn.addEventListener("click", () => prevMusic())
-
-//next music button event
 nextBtn.addEventListener("click", () => nextMusic())
+favoriteMusicBtn.addEventListener("click", () =>
+  toggleFavorite(nowPlayingSong())
+)
 
 Mousetrap.bind("space", () => toggleMusic())
 Mousetrap.bind("left", () => prevMusic())
 Mousetrap.bind("right", () => nextMusic())
+Mousetrap.bind("f", () => toggleFavorite(nowPlayingSong()))
 
 // update progress bar width according to music current time
 mainAudio.addEventListener("timeupdate", (e) => {
@@ -128,34 +201,46 @@ progressArea.addEventListener("click", (e) => {
 
   mainAudio.currentTime = (clickedOffsetX / progressWidth) * songDuration
   playMusic() //calling playMusic function
-  playingSong()
 })
+
+const repeatBtn = wrapper.querySelector("#repeat-plist")
+const playModes = {
+  repeat_one: "Playing one song on repeat",
+  shuffle: "Playing all shuffled",
+  repeat: "Playing all",
+  stars: "Playing favorites only",
+}
+const savePlayMode = (playMode) => {
+  try {
+    localStorage.setItem(localStorageKeys.playMode, playMode)
+  } catch (err) {
+    console.error("Error saving play mode", err)
+  }
+}
+const setPlayMode = (playMode) => {
+  repeatBtn.innerText = playMode
+  repeatBtn.setAttribute("title", playModes[playMode])
+  savePlayMode(playMode)
+}
+const initPlayMode = () => {
+  const playMode = localStorage.getItem(localStorageKeys.playMode)
+  if (playMode) setPlayMode(playMode)
+}
+initPlayMode()
+const getCurrentPlayMode = () => repeatBtn.innerText
 
 //change loop, shuffle, repeat icon onclick
-const repeatBtn = wrapper.querySelector("#repeat-plist")
 repeatBtn.addEventListener("click", () => {
-  let getText = repeatBtn.innerText //getting this tag innerText
-  switch (getText) {
-    case "repeat":
-      repeatBtn.innerText = "repeat_one"
-      repeatBtn.setAttribute("title", "Song looped")
-      break
-    case "repeat_one":
-      repeatBtn.innerText = "shuffle"
-      repeatBtn.setAttribute("title", "Playback shuffled")
-      break
-    case "shuffle":
-      repeatBtn.innerText = "repeat"
-      repeatBtn.setAttribute("title", "Playlist looped")
-      break
-  }
+  const modes = Object.keys(playModes)
+  const index = modes.indexOf(getCurrentPlayMode())
+  const nextPlayMode = modes[index + 1] || modes[0]
+  setPlayMode(nextPlayMode)
 })
 
-//code for what to do after song ended
-mainAudio.addEventListener("ended", () => {
+const endOfSong = () => {
   // we'll do according to the icon means if user has set icon to
   // loop song then we'll repeat the current song and will do accordingly
-  let getText = repeatBtn.innerText //getting this tag innerText
+  let getText = getCurrentPlayMode() //getting this tag innerText
   switch (getText) {
     case "repeat":
       nextMusic() //calling nextMusic function
@@ -165,6 +250,11 @@ mainAudio.addEventListener("ended", () => {
       loadMusic(musicIndex) //calling loadMusic function with argument, in the argument there is a index of current song
       playMusic() //calling playMusic function
       break
+    case "stars":
+      musicIndex = getNextFavorite(nowPlayingSong())
+      loadMusic(musicIndex)
+      playMusic()
+      break
     case "shuffle":
       let randIndex = Math.floor(Math.random() * allMusic.length + 1) //genereting random index/numb with max range of array length
       do {
@@ -173,78 +263,9 @@ mainAudio.addEventListener("ended", () => {
       musicIndex = randIndex //passing randomIndex to musicIndex
       loadMusic(musicIndex)
       playMusic()
-      playingSong()
       break
   }
-})
-
-//show music list onclick of music icon
-moreMusicBtn.addEventListener("click", () => {
-  musicList.classList.toggle("show")
-})
-closemoreMusic.addEventListener("click", () => {
-  moreMusicBtn.click()
-})
-
-const ulTag = wrapper.querySelector("ul")
-// let create li tags according to array length for list
-for (let i = 0; i < allMusic.length; i++) {
-  //let's pass the song name, artist from the array
-  let liTag = `<li li-index="${i + 1}">
-                <div class="row">
-                  <span>${allMusic[i].name}</span>
-                  <p>${allMusic[i].artist}</p>
-                </div>
-                <span id="${allMusic[i].src}" class="audio-duration">3:40</span>
-                <audio class="${allMusic[i].src}" src="songs/${
-    allMusic[i].src
-  }.mp3"></audio>
-              </li>`
-  ulTag.insertAdjacentHTML("beforeend", liTag) //inserting the li inside ul tag
-
-  let liAudioDuartionTag = ulTag.querySelector(`#${allMusic[i].src}`)
-  let liAudioTag = ulTag.querySelector(`.${allMusic[i].src}`)
-  liAudioTag.addEventListener("loadeddata", () => {
-    let duration = liAudioTag.duration
-    let totalMin = Math.floor(duration / 60)
-    let totalSec = Math.floor(duration % 60)
-    if (totalSec < 10) {
-      //if sec is less than 10 then add 0 before it
-      totalSec = `0${totalSec}`
-    }
-    liAudioDuartionTag.innerText = `${totalMin}:${totalSec}` //passing total duation of song
-    liAudioDuartionTag.setAttribute("t-duration", `${totalMin}:${totalSec}`) //adding t-duration attribute with total duration value
-  })
 }
 
-//play particular song from the list onclick of li tag
-function playingSong() {
-  const allLiTag = ulTag.querySelectorAll("li")
-
-  for (let j = 0; j < allLiTag.length; j++) {
-    let audioTag = allLiTag[j].querySelector(".audio-duration")
-
-    if (allLiTag[j].classList.contains("playing")) {
-      allLiTag[j].classList.remove("playing")
-      let adDuration = audioTag.getAttribute("t-duration")
-      audioTag.innerText = adDuration
-    }
-
-    //if the li tag index is equal to the musicIndex then add playing class in it
-    if (allLiTag[j].getAttribute("li-index") == musicIndex) {
-      allLiTag[j].classList.add("playing")
-      audioTag.innerText = "Playing"
-    }
-
-    allLiTag[j].setAttribute("onclick", "clicked(this)")
-  }
-}
-
-//particular li clicked function
-function clicked(element) {
-  let getLiIndex = element.getAttribute("li-index")
-  musicIndex = getLiIndex //updating current song index with clicked li index
-  loadMusic(musicIndex)
-  playMusic()
-  playingSong()
-}
+//code for what to do after song ended
+mainAudio.addEventListener("ended", () => endOfSong())
