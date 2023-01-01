@@ -4,5 +4,8 @@
     "type": "git",
     "url": "git+https://github.com/breck7/MusicOfAPeople.com.git"
   },
+  "prettier": {
+    "semi": false
+  },
   "homepage": "https://musicofapeople.com"
 }
