@@ -32,7 +32,7 @@ const loadMusic = (indexNumb) => {
   }
 
   musicArtist.innerText = song.artist;
-  musicImg.src = `images/${song.src}.jpg`;
+  musicImg.src = `images/${song.img}.jpg`;
   mainAudio.src = `songs/${song.src}.mp3`;
 };
 

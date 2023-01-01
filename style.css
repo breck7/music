@@ -340,7 +340,7 @@ ul li.playing {
 }
 
 a {
-  color: var(--darkwhite);
+  color: var(--red);
 }
 
 a:visited {
