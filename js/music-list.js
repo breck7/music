@@ -15,14 +15,16 @@ let allMusic = [
     original: "https://www.youtube.com/watch?v=cjYDPGrfdDM",
     artist: "Scotty2Yachty",
     img: "LemonHead",
-    src: "Lemonhead"
+    src: "Lemonhead",
+    genre: "Neu Metal"
   },
   {
     name: "Enjoy the Silence - Samuele Scelfo Edit",
     original: "https://www.youtube.com/watch?v=xgcLwtGlgLU",
     artist: "Unconventional",
     img: "EnjoyTheSilence",
-    src: "EnjoyTheSilence"
+    src: "EnjoyTheSilence",
+    genre: "alternative rock"
   },
   {
     name: "No Plans",
