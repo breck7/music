@@ -1,0 +1,879 @@
+<style>html,body,div,span,h1,h2,h3,h4,p,ol,ul,table,figure {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  border-spacing: 0;
+}
+html {
+  padding: 4px;
+  background-color: rgb(244,244,244);
+  font-family: Exchange,Georgia,serif;
+  color: #000;
+  font-size: 14px;
+  hyphens: auto;
+}
+.scrollHeaderComponent svg {
+  width: 30px;
+  height: 30px;
+  fill: rgba(204,204,204,.8);
+}
+.scrollHeaderComponent svg:hover {
+  fill: #333;
+}
+.scrollHeaderComponent a {
+  color: rgba(204,204,204,.8);
+  position: absolute;
+  font-size: 30px;
+  line-height: 27px;
+  text-decoration: none;
+}
+.scrollHeaderComponent a:hover {
+  color: #333;
+}
+.scrollHeaderComponent .scrollTopLeftBarComponent {
+  text-align: left;
+  left: 25px;
+}
+.scrollHeaderComponent .scrollTopRightBarComponent {
+  text-align: right;
+  right: 25px;
+}
+.scrollHeaderComponent a.scrollPrevPageLink {
+  left: 3px;
+}
+.scrollHeaderComponent a.scrollNextPageLink {
+  right: 3px;
+}
+.scrollFooterComponent {
+  border-top: 1px solid rgb(204,204,204);
+  margin-top: 8px;
+  padding-top: 8px;
+  text-align: center;
+}
+.scrollFooterComponent svg {
+  width: 30px;
+  height: 30px;
+  fill: rgba(204,204,204, .5);
+  padding: 0 7px;
+}
+.scrollFooterComponent svg:hover {
+  fill: #333;
+}
+.scrollCommunityLinkComponent {
+  display: block;
+  font-family: Verdana;
+  font-weight: 100;
+  margin: .5em;
+  text-decoration: none;
+  color: rgba(204,204,204,.5);
+}
+.scrollColumnsComponent {
+  column-count: auto;
+  column-fill: balance;
+  column-width: 35ch;
+  column-gap: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: auto;
+}
+.scrollColumnsComponentRuled {
+  column-rule: 1px solid rgb(204,204,204);
+}
+.scrollSnippetContainerComponent {
+  border-bottom: 1px solid rgb(204,204,204);
+  padding: 1ch 0;
+  break-inside: avoid;
+  text-align: justify;
+  margin-bottom: .5em;
+}
+.scrollTitleComponent {
+  text-align: center;
+  margin-bottom: .25em;
+}
+.scrollTitleComponent a {
+  text-decoration: none;
+  color: #000;
+}
+.scrollDateComponent {
+  font-style: italic;
+  font-size: 80%;
+}
+.scrollParagraphComponent {
+  margin-top: 0.4em;
+  line-height: 1.4em;
+}
+.scrollQuoteComponent {
+  break-inside: avoid;
+  display: block;
+  margin: .5em 0;
+  padding: .5em;
+  background: rgba(204,204,204,.5);
+  white-space: pre-line;
+  border-left: .5em solid rgba(204,204,204,.8);
+}
+.scrollSectionComponent {
+  text-align: center;
+  margin-top: 1em;
+}
+.scrollQuestionComponent {
+  text-align: left;
+  margin-top: 2em;
+}
+.scrollNoteLink {
+  text-decoration: none;
+}
+code {
+  font-size: 90%;
+  background-color: rgba(204,204,204,.5);
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+.scrollCodeBlockComponent {
+  overflow: auto;
+  font-size: 80%;
+  hyphens: none;
+  white-space: pre;
+  border-left: .5em solid rgba(204,204,204,.8);
+  break-inside: avoid;
+  display: block;
+  margin: .5em 0;
+  padding: .5em;
+  border-radius: 0;
+}
+.scrollTableComponent {
+  table-layout: fixed;
+  margin: .5em 0;
+  overflow: hidden;
+  font-size: 80%;
+  width: 100%;
+  hyphens: none;
+  border: 1px solid rgba(224,224,224,.8);
+}
+.scrollTableComponent td,.scrollTableComponent th {
+  padding: 3px;
+  overflow: hidden;
+}
+.scrollTableComponent th {
+  border-bottom: 2px solid rgba(0,0,0,.6);
+  text-align: left;
+}
+.scrollTableComponent tr:nth-child(even) {
+  background: rgba(224,224,224,.6);
+}
+.scrollAuthor {
+  font-size: 12px;
+  font-style: italic;
+  margin: 4px 0;
+  text-align: center;
+}
+.scrollKpiTable {
+  width: 100%;
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  break-inside: avoid;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.scrollKpiTable td {
+  width: 33.3%;
+  border: 1px solid #e8e8e8;
+}
+.scrollKpiTable span {
+  font-size: 20p;;
+  display: block;
+}
+.scrollFileViewSourceUrlComponent {
+  text-align: center;
+  font-size: 80%;
+  margin: 0;
+  margin-top: 0.4em;
+  line-height: 1.4em;
+}
+.scrollFileViewSourceUrlComponent a {
+  color: #000;
+  text-decoration: none;
+}
+.scrollContinueReadingLink {
+  display: block;
+  text-align: center;
+}
+.scrollDialogueComponent span {
+  font-family: Verdana;
+  margin-top: 5px;
+  padding: 5px 20px;
+  border-radius: 15px;
+  display: inline-block;
+}
+.scrollDialogueComponentLeft {
+  text-align: left;
+}
+.scrollDialogueComponentLeft span {
+  background: rgba(204,204,204, .5);
+}
+.scrollDialogueComponentRight {
+  text-align: right;
+}
+.scrollDialogueComponentRight span {
+  color: white;
+  background: rgb(0,132,255);
+}
+.scrollImageComponent {
+  display: block;
+  text-align: center;
+}
+.scrollImageComponent img {
+  max-width: 98%;
+  height: auto;
+}
+.scrollImageComponent figcaption {
+  font-style: italic;
+}
+.scrollKeyboardNav {
+  display: none;
+}
+.scrollCaveat {
+  text-decoration: underline dashed 1px rgba(0,0,0,.1);
+  cursor: default;
+}
+</style>
+<div class="scrollHeaderComponent doNotPrint">
+ <a class="scrollPrevPageLink" href="about.html"><</a>
+ <a class="scrollTopLeftBarComponent" href="index.html"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.7166 3.79541C12.2835 3.49716 11.7165 3.49716 11.2834 3.79541L4.14336 8.7121C3.81027 8.94146 3.60747 9.31108 3.59247 9.70797C3.54064 11.0799 3.4857 13.4824 3.63658 15.1877C3.7504 16.4742 4.05336 18.1747 4.29944 19.4256C4.41371 20.0066 4.91937 20.4284 5.52037 20.4284H8.84433C8.98594 20.4284 9.10074 20.3111 9.10074 20.1665V15.9754C9.10074 14.9627 9.90433 14.1417 10.8956 14.1417H13.4091C14.4004 14.1417 15.204 14.9627 15.204 15.9754V20.1665C15.204 20.3111 15.3188 20.4284 15.4604 20.4284H18.4796C19.0806 20.4284 19.5863 20.0066 19.7006 19.4256C19.9466 18.1747 20.2496 16.4742 20.3634 15.1877C20.5143 13.4824 20.4594 11.0799 20.4075 9.70797C20.3925 9.31108 20.1897 8.94146 19.8566 8.7121L12.7166 3.79541ZM10.4235 2.49217C11.3764 1.83602 12.6236 1.83602 13.5765 2.49217L20.7165 7.40886C21.4457 7.91098 21.9104 8.73651 21.9448 9.64736C21.9966 11.0178 22.0564 13.5119 21.8956 15.3292C21.7738 16.7067 21.4561 18.4786 21.2089 19.7353C20.9461 21.0711 19.7924 22.0001 18.4796 22.0001H15.4604C14.4691 22.0001 13.6655 21.1791 13.6655 20.1665V15.9754C13.6655 15.8307 13.5507 15.7134 13.4091 15.7134H10.8956C10.754 15.7134 10.6392 15.8307 10.6392 15.9754V20.1665C10.6392 21.1791 9.83561 22.0001 8.84433 22.0001H5.52037C4.20761 22.0001 3.05389 21.0711 2.79113 19.7353C2.54392 18.4786 2.22624 16.7067 2.10437 15.3292C1.94358 13.5119 2.00338 11.0178 2.05515 9.64736C2.08957 8.73652 2.55427 7.91098 3.28346 7.40886L10.4235 2.49217Z"/></svg></a>
+ <a class="scrollTopRightBarComponent" href="https://github.com/breck7/MusicOfAPeople.com"><svg xmlns="http://www.w3.org/2000/svg" width="92pt" height="92pt" viewBox="0 0 92 92"><path d="M90.156 41.965 50.036 1.848a5.913 5.913 0 0 0-8.368 0l-8.332 8.332 10.566 10.566a7.03 7.03 0 0 1 7.23 1.684 7.043 7.043 0 0 1 1.673 7.277l10.183 10.184a7.026 7.026 0 0 1 7.278 1.672 7.04 7.04 0 0 1 0 9.957 7.045 7.045 0 0 1-9.961 0 7.038 7.038 0 0 1-1.532-7.66l-9.5-9.497V59.36a7.04 7.04 0 0 1 1.86 11.29 7.04 7.04 0 0 1-9.957 0 7.04 7.04 0 0 1 0-9.958 7.034 7.034 0 0 1 2.308-1.539V33.926a7.001 7.001 0 0 1-2.308-1.535 7.049 7.049 0 0 1-1.516-7.7L29.242 14.273 1.734 41.777a5.918 5.918 0 0 0 0 8.371L41.855 90.27a5.92 5.92 0 0 0 8.368 0l39.933-39.934a5.925 5.925 0 0 0 0-8.371"/></g></svg></a>
+ <a class="scrollNextPageLink" href="about.html">></a>
+</div>
+
+<h1 class="scrollTitleComponent"><a href="catalog.html">Music Of A People Catalog</a></h1>
+
+<div style="max-width: 1200px; margin: auto;">
+
+<table class="scrollTableComponent"><thead><tr><th>SongName</th>
+
+<th>Artist</th>
+
+<th>CoverImage</th>
+
+<th>Mp3Name</th>
+
+<th>Genre</th>
+</tr></thead>
+<tbody><tr><td><a href="index.html#LemonHead">LemonHead</a></td>
+<td><a href="https://www.youtube.com/watch?v=cjYDPGrfdDM">Scotty2Yachty</a></td>
+<td>LemonHead</td>
+<td>Lemonhead</td>
+<td>Neu Metal</td>
+</tr>
+<tr><td><a href="index.html#Enjoy the Silence - Samuele Scelfo Edit">Enjoy the Silence - Samuele Scelfo Edit</a></td>
+<td><a href="https://www.youtube.com/watch?v=xgcLwtGlgLU">Unconventional</a></td>
+<td>EnjoyTheSilence</td>
+<td>EnjoyTheSilence</td>
+<td>alternative rock</td>
+</tr>
+<tr><td><a href="index.html#No Plans">No Plans</a></td>
+<td><a href="https://www.youtube.com/watch?v=gWHx0x8KD0E">Justin Ransom</a></td>
+<td>No Plans</td>
+<td>No Plans</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Lofi Girl">Lofi Girl</a></td>
+<td><a href="https://www.youtube.com/watch?v=2mHgdptQaMY">David E Beats</a></td>
+<td>Lofi Girl</td>
+<td>Lofi girl</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Dreams">Dreams</a></td>
+<td><a href="https://www.youtube.com/watch?v=6Pm1FVPA_T8">Mr. Yohan</a></td>
+<td>Dreams</td>
+<td>Dreams</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Egypt">Egypt</a></td>
+<td><a href="https://www.youtube.com/watch?v=RGwSak0n-Fw">Mr. Yohan</a></td>
+<td>Egypt</td>
+<td>Egypt</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Nigeria">Nigeria</a></td>
+<td><a href="https://www.youtube.com/watch?v=beXj_dRjT8Q">Mr. Yohan</a></td>
+<td>Nigeria</td>
+<td>Nigeria</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Coffee Shop">Coffee Shop</a></td>
+<td><a href="https://www.youtube.com/watch?v=Dk1AviaKr8c">Mr. Yohan</a></td>
+<td>Coffee Shop</td>
+<td>Coffee Shop</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Crossfire">Crossfire</a></td>
+<td><a href="https://youtu.be/eH4F1Tdb040">Stepehen</a></td>
+<td>Crossfire</td>
+<td>Stephen - Crossfire</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Help Me Lose my mind (Mazde Remix)">Help Me Lose my mind (Mazde Remix)</a></td>
+<td><a href="https://soundcloud.com/mazde">Disclosure</a></td>
+<td>Help-Me-lose-my-Mind</td>
+<td>Disclosure - Help Me Lose My Mind (Mazde Remix)</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Burning Alive">Burning Alive</a></td>
+<td><a href="https://soundcloud.com/8graves">8 Graves</a></td>
+<td>Burning Alive</td>
+<td>8 Graves - Burning Alive</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Cold Shoulder">Cold Shoulder</a></td>
+<td><a href="https://soundcloud.com/8graves">8 Graves</a></td>
+<td>Cold Shoulder</td>
+<td>8 Graves - Cold Shoulder</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#I was Wrong">I was Wrong</a></td>
+<td><a href="https://soundcloud.com/thisisarizonamusic">A R I Z O N A</a></td>
+<td>I was wrong</td>
+<td>A R I Z O N A - I Was Wrong</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Trouble">Trouble</a></td>
+<td><a href="https://soundcloud.com/AdamJensenMusic">Adam Jensen</a></td>
+<td>Trouble</td>
+<td>Adam Jensen - Trouble</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Dreams (feat. ELEA)">Dreams (feat. ELEA)</a></td>
+<td><a href="https://soundcloud.com/adventureclub">Adventure Club</a></td>
+<td>Dreams AdClub</td>
+<td>Adventure Club - Dreams (feat. ELEA)</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Wonder (feat. The Kite String Tangle)">Wonder (feat. The Kite String Tangle)</a></td>
+<td><a href="https://soundcloud.com/adventureclub">Adventure Club</a></td>
+<td>Wonder</td>
+<td>Adventure Club - Wonder (feat. The Kite String Tangle)</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Rise & Fall">Rise & Fall</a></td>
+<td><a href="https://soundcloud.com/adventureclub">Adventure Club & Krewalla</a></td>
+<td>Rise & Fall</td>
+<td>Adventure Club & Krewella - Rise & Fall</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Dear Lillie">Dear Lillie</a></td>
+<td><a href="https://soundcloud.com/aetheraudio">Aether</a></td>
+<td>Dear Lillie</td>
+<td>Aether - Dear Lillie</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Fragments">Fragments</a></td>
+<td><a href="https://soundcloud.com/aetheraudio">Aether</a></td>
+<td>Fragments</td>
+<td>Aether - Fragments</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Tender">Tender</a></td>
+<td><a href="https://soundcloud.com/aetheraudio">Aether</a></td>
+<td>Tender</td>
+<td>Aether - Tender</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#If I Killed Someone For You">If I Killed Someone For You</a></td>
+<td><a href="https://soundcloud.com/alecbenjamin">Alec Benjamin</a></td>
+<td>Killed Someone</td>
+<td>Alec Benjamin - If I Killed Someone For You</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Outrunning Karma">Outrunning Karma</a></td>
+<td><a href="https://soundcloud.com/alecbenjamin">Alec Benjamin</a></td>
+<td>Outrunning Karma</td>
+<td>Alec Benjamin - Outrunning Karma</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Paper Love">Paper Love</a></td>
+<td><a href="https://soundcloud.com/alliexandra">Allie X</a></td>
+<td>Paper Love</td>
+<td>Allie X - Paper Love</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#You and I">You and I</a></td>
+<td><a href="https://www.youtube.com/watch?v=xgcLwtGlgLU">ALOTT x Wankelmut x Enny-Mae</a></td>
+<td>You and I</td>
+<td>ALOTT x Wankelmut x Enny-Mae - You and I</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#If God Had A Boat">If God Had A Boat</a></td>
+<td><a href="https://www.anymamusic.com/">ANYMA</a></td>
+<td>If God Had A Boat</td>
+<td>ANYMA - If God Had A Boat</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Lord & Master">Lord & Master</a></td>
+<td><a href="https://soundcloud.com/lindien">Apashe</a></td>
+<td>Lord & Master</td>
+<td>Apashe - Lord & Master</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#I don't know why">I don't know why</a></td>
+<td><a href="https://www.instagram.com/avaiion/">AVAION</a></td>
+<td>I don't know why</td>
+<td>AVAION - i don't know why</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Two Million">Two Million</a></td>
+<td><a href="http://soundcloud.com/aviciiofficial">Avicii</a></td>
+<td>Two Million</td>
+<td>Avicii - Two Million</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#GRRRLS">GRRRLS</a></td>
+<td><a href="https://fanlink.to/AViVAShop">AViVA</a></td>
+<td>GRRRLS</td>
+<td>AViVA - GRRRLS</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Hypnotized">Hypnotized</a></td>
+<td><a href="https://fanlink.to/AViVAShop">AViVA</a></td>
+<td>Hypnotized</td>
+<td>AViVA - Hypnotized</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Nightmare">Nightmare</a></td>
+<td><a href="https://fanlink.to/AViVAShop">AViVA</a></td>
+<td>Nightmares</td>
+<td>AViVA - Nightmare</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Twisted">Twisted</a></td>
+<td><a href="https://fanlink.to/AViVAShop">AViVA</a></td>
+<td>Twisted</td>
+<td>AViVA - Twisted</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Ghostbox">Ghostbox</a></td>
+<td><a href="https://soundcloud.com/awaynotfound">AWAY x Crywolf</a></td>
+<td>Ghostbox</td>
+<td>AWAY x Crywolf - Ghostbox</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Rituals">Rituals</a></td>
+<td><a href="https://soundcloud.com/awaynotfound">AWAY x Echoes</a></td>
+<td>Rituals</td>
+<td>AWAY x Echos - Ritual</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Blossom">Blossom</a></td>
+<td><a href="https://soundcloud.com/ben-walter-12">Ben Walter</a></td>
+<td>Blossom</td>
+<td>Ben Walter - Blossom</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Between The Devil And The Deep Blue Sea">Between The Devil And The Deep Blue Sea</a></td>
+<td><a href="https://soundcloud.com/xylo100">XYLØ</a></td>
+<td>Between The Devil And The Deep Blue Sea</td>
+<td>XYLØ - Between The Devil And The Deep Blue Sea</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Ocean Eyes (Astronomyy Remix)">Ocean Eyes (Astronomyy Remix)</a></td>
+<td><a href="https://soundcloud.com/billieeilishsh">Billie Eilish</a></td>
+<td>Ocean Eyes</td>
+<td>Billie Eilish - Ocean Eyes (Astronomyy Remix)</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Wings (Nu-Logic Remix)">Wings (Nu-Logic Remix)</a></td>
+<td><a href="http://www.nulogicmusic.com/">Birdy</a></td>
+<td>Wings</td>
+<td>Birdy - Wings (Nu-Logic Remix)</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#River">River</a></td>
+<td><a href="https://soundcloud.com/thatgirlbishop">BISHOP</a></td>
+<td>River</td>
+<td>BISHOP - River</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Wild Horses">Wild Horses</a></td>
+<td><a href="https://soundcloud.com/thatgirlbishop">BISHOP</a></td>
+<td>Wild Horses</td>
+<td>BISHOP - Wild Horses</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#IDFC (Acoustic Version)">IDFC (Acoustic Version)</a></td>
+<td><a href="https://soundcloud.com/iamblackbear">Blackbear</a></td>
+<td>IDFC</td>
+<td>Blackbear - IDFC (Acoustic Version)</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Raging On A Sunday">Raging On A Sunday</a></td>
+<td><a href="https://soundcloud.com/bohnesofficial">Bohnes</a></td>
+<td>Raging On A Sunday</td>
+<td>Bohnes - Raging On A Sunday</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Kingslayer">Kingslayer</a></td>
+<td><a href="https://soundcloud.com/casterscurse">Caster & Ironheart</a></td>
+<td>Kingslayer</td>
+<td>Caster & Ironheart - Kingslayer</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#DOOM">DOOM</a></td>
+<td><a href="https://soundcloud.com/calivania">Calivania</a></td>
+<td>DOOM</td>
+<td>Calivania - DOOM</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Koto">Koto</a></td>
+<td><a href="https://soundcloud.com/clozee">CloZee</a></td>
+<td>Koto</td>
+<td>CloZee - Koto</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#You're Not Alone">You're Not Alone</a></td>
+<td><a href="https://soundcloud.com/cma-music">CMA</a></td>
+<td>You're Not Alone</td>
+<td>CMA - You're Not Alone</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Midnight (Kygo Remix)">Midnight (Kygo Remix)</a></td>
+<td><a href="https://soundcloud.com/kygo">Coldplay</a></td>
+<td>Midnight</td>
+<td>Coldplay - Midnight (Kygo Remix)</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Snowglobe">Snowglobe</a></td>
+<td><a href="https://soundcloud.com/iamcozmoe">Cozmoe</a></td>
+<td>Snowglobe</td>
+<td>cozmoe - Snowglobe</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#we try">we try</a></td>
+<td><a href="https://soundcloud.com/iamcozmoe">Cozmoe</a></td>
+<td>we try</td>
+<td>cozmoe - we try</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Feel Like (feat. CAPPA)">Feel Like (feat. CAPPA)</a></td>
+<td><a href="https://soundcloud.com/dabinlee">Dabin</a></td>
+<td>Feel Like</td>
+<td>Dabin - Feel Like (feat. CAPPA)</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Hold">Hold</a></td>
+<td><a href="https://soundcloud.com/dabinlee">Dabin</a></td>
+<td>Hold</td>
+<td>Dabin - Hold (feat. Daniela Andrade)</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Holding On (feat. Lowell)">Holding On (feat. Lowell)</a></td>
+<td><a href="https://soundcloud.com/dabinlee">Dabin</a></td>
+<td>Holding on</td>
+<td>Dabin - Holding On (feat. Lowell)</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Hope It Hurts (feat. Essenger)">Hope It Hurts (feat. Essenger)</a></td>
+<td><a href="https://soundcloud.com/dabinlee">Dabin</a></td>
+<td>Hope It Hurts</td>
+<td>Dabin - Hope It Hurts (feat. Essenger)</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Remember (feat. Noelle Johnson)">Remember (feat. Noelle Johnson)</a></td>
+<td><a href="https://soundcloud.com/dabinlee">Dabin</a></td>
+<td>Remember</td>
+<td>Dabin - Remember (feat. Noelle Johnson)</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#The Take Down">The Take Down</a></td>
+<td><a href="https://soundcloud.com/dabinlee">Dabin & Koda</a></td>
+<td>The Take Down</td>
+<td>Dabin & Koda - The Take Down</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#When This Is Over (feat. Donovan Woods)">When This Is Over (feat. Donovan Woods)</a></td>
+<td><a href="https://soundcloud.com/dabinlee">Dabin & Nurko</a></td>
+<td>When this is over</td>
+<td>Dabin & Nurko - When This Is Over (feat. Donovan Woods)</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Again">Again</a></td>
+<td><a href="https://soundcloud.com/dabinlee">Dabin x MYRNE</a></td>
+<td>Again</td>
+<td>Dabin x MYRNE - Again</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Get Lucky (Razihel Remix)">Get Lucky (Razihel Remix)</a></td>
+<td><a href="https://soundcloud.com/razihel">Daft Punk</a></td>
+<td>Get Lucky</td>
+<td>Daft Punk - Get Lucky (Razihel Remix)</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Self Control">Self Control</a></td>
+<td><a href="https://soundcloud.com/dallask">DallasK</a></td>
+<td>Self Control</td>
+<td>DallasK - Self Control</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#i don't give a f**k about it">i don't give a f**k about it</a></td>
+<td><a href="https://soundcloud.com/damp-state">DAMPSTATE</a></td>
+<td>I don't give</td>
+<td>DAMPSTATE - i don't give a f**k about it</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#0:59">0:59</a></td>
+<td><a href="https://soundcloud.com/2emedanger">DANGER</a></td>
+<td>Danger</td>
+<td>DANGER - 0-59</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Waking Up">Waking Up</a></td>
+<td><a href="https://linktr.ee/dannyolsonmusic">Danny Olsen & Becca Krueger</a></td>
+<td>Waking Up</td>
+<td>Danny Olson & Becca Krueger - Waking Up</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#White Noise (feat. Ryder)">White Noise (feat. Ryder)</a></td>
+<td><a href="https://soundcloud.com/danrell">Danrell</a></td>
+<td>White Noise</td>
+<td>Danrell - White Noise (feat. Ryder)</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Medicine (Sound Remedy Remix)">Medicine (Sound Remedy Remix)</a></td>
+<td><a href="http://soundcloud.com/soundremedy">Daughter</a></td>
+<td>Medicine</td>
+<td>Daughter - Medicine (Sound Remedy Remix)</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#All I Want (Manila Killa Remix)">All I Want (Manila Killa Remix)</a></td>
+<td><a href="https://soundcloud.com/manilakilla">Dawn Golden</a></td>
+<td>All I Want</td>
+<td>Dawn Golden - All I Want (Manila Killa Remix)</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Stardust">Stardust</a></td>
+<td><a href="https://soundcloud.com/dniemusic">DNIE</a></td>
+<td>Stardust</td>
+<td>DNIE - Stardust</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Lost & Found (feat. Meggie York)">Lost & Found (feat. Meggie York)</a></td>
+<td><a href="https://soundcloud.com/dreweybear/tracks">Dreweybear</a></td>
+<td>Lost & Found</td>
+<td>Dreweybear - Lost & Found (feat. Meggie York)</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Demons">Demons</a></td>
+<td><a href="https://soundcloud.com/droeloemusic">DROELOE</a></td>
+<td>Demons</td>
+<td>DROELOE - Demons</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Oath (TWO LANES REMIX)">Oath (TWO LANES REMIX)</a></td>
+<td><a href="https://soundcloud.com/droeloemusic">DROELOE</a></td>
+<td>Oath</td>
+<td>DROELOE - Oath (TWO LANES REMIX)</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Panorama">Panorama</a></td>
+<td><a href="https://soundcloud.com/droeloemusic">DROELOE</a></td>
+<td>Panorama</td>
+<td>DROELOE - Panorama</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Boys Do Cry">Boys Do Cry</a></td>
+<td><a href="https://soundcloud.com/itsdylanmatthew">Dylan Matthew</a></td>
+<td>Boys Do Cry</td>
+<td>Dylan Matthew - Boys Do Cry</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Summer 16">Summer 16</a></td>
+<td><a href="https://soundcloud.com/itsdylanmatthew">Dylan Matthew</a></td>
+<td>Summer 16</td>
+<td>Dylan Matthew - Summer 16</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Wait For Us">Wait For Us</a></td>
+<td><a href="https://soundcloud.com/ebenofficial">EBEN & Meggie York</a></td>
+<td>Wait For Us</td>
+<td>EBEN & Meggie York - Wait For Us</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Love Story">Love Story</a></td>
+<td><a href="https://soundcloud.com/ebenofficial">EBEN & Zack Gray</a></td>
+<td>Love Story</td>
+<td>EBEN & Zack Gray - Love Story</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Crazy">Crazy</a></td>
+<td><a href="https://soundcloud.com/echosofficial">ECHOS</a></td>
+<td>Crazy</td>
+<td>Echos - Crazy</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Euphoria">Euphoria</a></td>
+<td><a href="https://soundcloud.com/echosofficial">ECHOS</a></td>
+<td>Euphoria</td>
+<td>Echos - Euphoria</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Guest Room">Guest Room</a></td>
+<td><a href="https://soundcloud.com/echosofficial">ECHOS</a></td>
+<td>Guest Room</td>
+<td>Echos - Guest Room</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#King of Disappointment">King of Disappointment</a></td>
+<td><a href="https://soundcloud.com/echosofficial">ECHOS</a></td>
+<td>King of Disappointment</td>
+<td>Echos - King of Disappointment</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Saints">Saints</a></td>
+<td><a href="https://soundcloud.com/echosofficial">ECHOS</a></td>
+<td>Saints</td>
+<td>Echos - Saints</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Tomorrow (Kicks N Licks Remix)">Tomorrow (Kicks N Licks Remix)</a></td>
+<td><a href="https://soundcloud.com/echosofficial">ECHOS</a></td>
+<td>Tomorrow</td>
+<td>Echos - Tomorrow (Kicks N Licks Remix)</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Vacant">Vacant</a></td>
+<td><a href="https://soundcloud.com/echosofficial">ECHOS</a></td>
+<td>Vacant</td>
+<td>Echos - Vacant</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Take">Take</a></td>
+<td><a href="https://soundcloud.com/echosofficial">ECHOS</a></td>
+<td>Take</td>
+<td>Echos - Take</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Gravity">Gravity</a></td>
+<td><a href="https://soundcloud.com/iameden">EDEN</a></td>
+<td>Gravity</td>
+<td>EDEN - Gravity</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Wake Up">Wake Up</a></td>
+<td><a href="https://soundcloud.com/iameden">EDEN</a></td>
+<td>Wake Up</td>
+<td>EDEN - Wake Up</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#drugs">drugs</a></td>
+<td><a href="https://soundcloud.com/iameden">EDEN</a></td>
+<td>drugs</td>
+<td>EDEN - drugs</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#XO">XO</a></td>
+<td><a href="https://soundcloud.com/iameden">EDEN</a></td>
+<td>XO</td>
+<td>EDEN - XO</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#End Credits (feat. Leah Kelly)">End Credits (feat. Leah Kelly)</a></td>
+<td><a href="https://soundcloud.com/iameden">EDEN</a></td>
+<td>End Credits</td>
+<td>EDEN - End Credits (feat. Leah Kelly)</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#crash">crash</a></td>
+<td><a href="https://soundcloud.com/iameden">EDEN</a></td>
+<td>crash</td>
+<td>EDEN - crash</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Rock & Roll">Rock & Roll</a></td>
+<td><a href="https://soundcloud.com/iameden">EDEN</a></td>
+<td>Rock & Roll</td>
+<td>music name here - remember img must be in .mp3 formate and it's inside the songs folder of this project folder</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Drown (feat. Au/Ra)">Drown (feat. Au/Ra)</a></td>
+<td><a href="https://soundcloud.com/ekalimusic/">EKALI</a></td>
+<td>Drown</td>
+<td>Ekali - Drown (feat. Au-Ra)</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Fairy Tale">Fairy Tale</a></td>
+<td><a href="https://soundcloud.com/ekalimusic/">Ekali & Elohim</a></td>
+<td>Fairy Tale</td>
+<td>Ekali & Elohim - Fairy Tale</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Pretty Little Gangster">Pretty Little Gangster</a></td>
+<td><a href="www.ellaisaacson.com">Ella Isaacson</a></td>
+<td>Pretty Little Gangster</td>
+<td>Ella Isaacson - Pretty Little Gangster</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Ruins">Ruins</a></td>
+<td><a href="www.ellaisaacson.com">Ella Isaacson</a></td>
+<td>Ruins</td>
+<td>Ella Isaacson - Ruins</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#All On My Line">All On My Line</a></td>
+<td>Revenue Hefner</td>
+<td>All-On-My-Line</td>
+<td>All-On-My-Line</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Pushin On' Foot">Pushin On' Foot</a></td>
+<td>Revenue Hefner</td>
+<td>Pushin-On-Foot</td>
+<td>Pushin-On-Foot</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Lost Sky - Vision NCS">Lost Sky - Vision NCS</a></td>
+<td><a href="https://soundcloud.com/nocopyrightsounds/lost-sky-vision-ncs-release">NCS Release</a></td>
+<td>Lost-Sky_Vision-NCS</td>
+<td>Lost-Sky_Vision-NCS</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Jim - Sun Goes Down">Jim - Sun Goes Down</a></td>
+<td><a href="https://soundcloud.com/nocopyrightsounds/jim-yosef-x-roy-knox-sun-goes-down-ncs-release">Jim Yosef x Roy</a></td>
+<td>Jim_Sun-Goes-Down</td>
+<td>Jim_Sun-Goes-Down</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Hardwind - Want Me">Hardwind - Want Me</a></td>
+<td><a href="https://www.youtube.com/watch?v=-Rw8zR9wmTY">Mike Archangelo</a></td>
+<td>Hardwind_Want-Me</td>
+<td>Hardwind_Want-Me</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Harley Bird - Home">Harley Bird - Home</a></td>
+<td><a href="https://www.youtube.com/watch?v=zpJDrG6H2kg">Jordan Schor</a></td>
+<td>Harley-Bird_Home</td>
+<td>Harley-Bird_Home</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Ikson Anywhere – Ikson">Ikson Anywhere – Ikson</a></td>
+<td><a href="https://www.youtube.com/watch?v=zwPhqU29rWQ">Audio Library</a></td>
+<td>Ikson-Anywhere_Ikson</td>
+<td>Ikson-Anywhere_Ikson</td>
+<td></td>
+</tr>
+<tr><td><a href="index.html#Beauz & Jvna - Crazy">Beauz & Jvna - Crazy</a></td>
+<td><a href="https://www.youtube.com/watch?v=xgcLwtGlgLU">Beauz & Jvna</a></td>
+<td>Beauz&Jvna_Crazy</td>
+<td>Beauz&Jvna_Crazy</td>
+<td></td>
+</tr></tbody></table>
+
+
+</div>
+
+</div><p class="scrollFileViewSourceUrlComponent doNotPrint">
+ <a href="https://github.com/breck7/MusicOfAPeople.com/blob/main/catalog.scroll">View source</a>
+</p>
+<div class="scrollFooterComponent doNotPrint">
+ <a href="mailto:artists@musicofapeople.com"><svg viewBox="3 5 24 20" width="24" height="20" xmlns="http://www.w3.org/2000/svg"><g transform="matrix(1, 0, 0, 1, 0, -289.0625)"><path style="opacity:1;stroke:none;stroke-width:0.49999997;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 5 5 C 4.2955948 5 3.6803238 5.3628126 3.3242188 5.9101562 L 14.292969 16.878906 C 14.696939 17.282876 15.303061 17.282876 15.707031 16.878906 L 26.675781 5.9101562 C 26.319676 5.3628126 25.704405 5 25 5 L 5 5 z M 3 8.4140625 L 3 23 C 3 24.108 3.892 25 5 25 L 25 25 C 26.108 25 27 24.108 27 23 L 27 8.4140625 L 17.121094 18.292969 C 15.958108 19.455959 14.041892 19.455959 12.878906 18.292969 L 3 8.4140625 z " transform="translate(0,289.0625)" id="rect4592"/></g></svg></a>
+ <a href="https://github.com/breck7/MusicOfAPeople.com"><svg xmlns="http://www.w3.org/2000/svg" width="92pt" height="92pt" viewBox="0 0 92 92"><path d="M90.156 41.965 50.036 1.848a5.913 5.913 0 0 0-8.368 0l-8.332 8.332 10.566 10.566a7.03 7.03 0 0 1 7.23 1.684 7.043 7.043 0 0 1 1.673 7.277l10.183 10.184a7.026 7.026 0 0 1 7.278 1.672 7.04 7.04 0 0 1 0 9.957 7.045 7.045 0 0 1-9.961 0 7.038 7.038 0 0 1-1.532-7.66l-9.5-9.497V59.36a7.04 7.04 0 0 1 1.86 11.29 7.04 7.04 0 0 1-9.957 0 7.04 7.04 0 0 1 0-9.958 7.034 7.034 0 0 1 2.308-1.539V33.926a7.001 7.001 0 0 1-2.308-1.535 7.049 7.049 0 0 1-1.516-7.7L29.242 14.273 1.734 41.777a5.918 5.918 0 0 0 0 8.371L41.855 90.27a5.92 5.92 0 0 0 8.368 0l39.933-39.934a5.925 5.925 0 0 0 0-8.371"/></g></svg></a>
+ <a href="https://scroll.pub" class="scrollCommunityLinkComponent">Built with Scroll v48.0.0</a>
+</div>
