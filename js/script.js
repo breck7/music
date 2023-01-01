@@ -70,12 +70,16 @@ function nextMusic() {
   playingSong();
 }
 
-// play or pause button event
-playPauseBtn.addEventListener("click", () => {
+const toggleMusic = () => {
   const isMusicPlay = wrapper.classList.contains("paused");
   //if isPlayMusic is true then call pauseMusic else call playMusic
   isMusicPlay ? pauseMusic() : playMusic();
   playingSong();
+};
+
+// play or pause button event
+playPauseBtn.addEventListener("click", () => {
+  toggleMusic();
 });
 
 //prev music button event
@@ -87,6 +91,10 @@ prevBtn.addEventListener("click", () => {
 nextBtn.addEventListener("click", () => {
   nextMusic();
 });
+
+Mousetrap.bind("space", () => toggleMusic());
+Mousetrap.bind("left", () => prevMusic());
+Mousetrap.bind("right", () => nextMusic());
 
 // update progress bar width according to music current time
 mainAudio.addEventListener("timeupdate", (e) => {
