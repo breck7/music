@@ -1,0 +1,8 @@
+{
+  "name": "MusicOfAPeople.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/breck7/MusicOfAPeople.com.git"
+  },
+  "homepage": "https://musicofapeople.com"
+}
