@@ -78,19 +78,13 @@ const toggleMusic = () => {
 }
 
 // play or pause button event
-playPauseBtn.addEventListener("click", () => {
-  toggleMusic()
-})
+playPauseBtn.addEventListener("click", () => toggleMusic())
 
 //prev music button event
-prevBtn.addEventListener("click", () => {
-  prevMusic()
-})
+prevBtn.addEventListener("click", () => prevMusic())
 
 //next music button event
-nextBtn.addEventListener("click", () => {
-  nextMusic()
-})
+nextBtn.addEventListener("click", () => nextMusic())
 
 Mousetrap.bind("space", () => toggleMusic())
 Mousetrap.bind("left", () => prevMusic())
