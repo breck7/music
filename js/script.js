@@ -13,7 +13,6 @@ const wrapper = document.querySelector(".wrapper"),
 const localStorageKeys = {
   favorites: "favorites",
   playMode: "playMode",
-  currentSong: "currentSong",
 }
 
 let favorites = []
@@ -29,15 +28,12 @@ const initFavorites = () => {
 initFavorites()
 
 const getStartSongIndex = () => {
-  const randomIndex = Math.floor(Math.random() * allMusic.length + 1)
-  try {
-    const saved = JSON.parse(localStorage.getItem(localStorageKeys.currentSong))
-    if (saved === undefined) return randomIndex
-    const hit = allMusic.findIndex((haystack) => haystack.name === saved.name)
-    return hit > -1 ? hit : randomIndex
-  } catch (err) {
-    return randomIndex
-  }
+  const startHash = decodeURIComponent(location.hash.substring(1))
+  const playFromHash = allMusic.findIndex(
+    (haystack) => haystack.name === startHash
+  )
+  if (playFromHash > -1) return playFromHash
+  return Math.floor(Math.random() * allMusic.length + 1) // Otherwise play random song
 }
 let musicIndex = getStartSongIndex()
 isMusicPaused = true
@@ -46,13 +42,6 @@ window.addEventListener("load", () => loadMusic(musicIndex))
 
 const nowPlayingSong = () => allMusic[musicIndex]
 
-const saveCurrentSong = (song) => {
-  try {
-    localStorage.setItem(localStorageKeys.currentSong, JSON.stringify(song))
-  } catch (err) {
-    console.error("Error saving", err)
-  }
-}
 const loadMusic = (indexNumb) => {
   if (indexNumb < 0) indexNumb = allMusic.length - 1
 
@@ -73,7 +62,11 @@ const loadMusic = (indexNumb) => {
   musicImg.src = `images/${song.img}.jpg`
   mainAudio.src = `songs/${song.src}.mp3`
   updateFavorite(song)
-  saveCurrentSong(song)
+  try {
+    location.hash = encodeURIComponent(song.name)
+  } catch (err) {
+    console.error(err)
+  }
 }
 
 const updateFavorite = (song) =>
@@ -162,6 +155,7 @@ Mousetrap.bind("space", () => toggleMusic())
 Mousetrap.bind("left", () => prevMusic())
 Mousetrap.bind("right", () => nextMusic())
 Mousetrap.bind("f", () => toggleFavorite(nowPlayingSong()))
+Mousetrap.bind("r", () => playRandomSong())
 
 // update progress bar width according to music current time
 mainAudio.addEventListener("timeupdate", (e) => {
@@ -237,6 +231,16 @@ repeatBtn.addEventListener("click", () => {
   setPlayMode(nextPlayMode)
 })
 
+const playRandomSong = () => {
+  let randIndex = Math.floor(Math.random() * allMusic.length + 1) //genereting random index/numb with max range of array length
+  do {
+    randIndex = Math.floor(Math.random() * allMusic.length + 1)
+  } while (musicIndex == randIndex) //this loop run until the next random number won't be the same of current musicIndex
+  musicIndex = randIndex //passing randomIndex to musicIndex
+  loadMusic(musicIndex)
+  playMusic()
+}
+
 const endOfSong = () => {
   // we'll do according to the icon means if user has set icon to
   // loop song then we'll repeat the current song and will do accordingly
@@ -256,13 +260,7 @@ const endOfSong = () => {
       playMusic()
       break
     case "shuffle":
-      let randIndex = Math.floor(Math.random() * allMusic.length + 1) //genereting random index/numb with max range of array length
-      do {
-        randIndex = Math.floor(Math.random() * allMusic.length + 1)
-      } while (musicIndex == randIndex) //this loop run until the next random number won't be the same of current musicIndex
-      musicIndex = randIndex //passing randomIndex to musicIndex
-      loadMusic(musicIndex)
-      playMusic()
+      playRandomSong()
       break
   }
 }
