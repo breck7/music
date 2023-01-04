@@ -7,5 +7,8 @@
   "prettier": {
     "semi": false
   },
-  "homepage": "https://musicofapeople.com"
+  "homepage": "https://musicofapeople.com",
+  "dependencies": {
+    "scroll-cli": "^49.1.0"
+  }
 }
