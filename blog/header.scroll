@@ -5,6 +5,7 @@ email artists@musicofapeople.com
 baseUrl https://musicofapeople.com/blog/
 scrollCssTag
 scrollHeader
+metaTags
 
 css
  img {

@@ -4,6 +4,9 @@
     "type": "git",
     "url": "git+https://github.com/breck7/MusicOfAPeople.com.git"
   },
+  "scripts": {
+    "open": "open index.html"
+  },
   "prettier": {
     "semi": false
   },
