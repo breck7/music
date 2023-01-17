@@ -1,8 +1,7 @@
 import header.scroll
 title Music Of A People Catalog
 
-html
- <div style="max-width: 1200px; margin: auto;">
+html <div style="max-width: 1200px; margin: auto;">
 
 commaTable
  SongName,SongNameLink,Artist,ArtistLink,CoverImage,Mp3Name,Genre
@@ -109,9 +108,6 @@ commaTable
  Beauz & Jvna - Crazy,index.html#Beauz & Jvna - Crazy,Beauz & Jvna,https://www.youtube.com/watch?v=xgcLwtGlgLU,Beauz&Jvna_Crazy,Beauz&Jvna_Crazy,
 
 
-html
- </div>
+html </div>
 
 scrollFooter
-
-

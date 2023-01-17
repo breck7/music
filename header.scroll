@@ -4,6 +4,6 @@ git https://github.com/breck7/MusicOfAPeople.com
 viewSourceBaseUrl https://github.com/breck7/MusicOfAPeople.com/blob/main
 email artists@musicofapeople.com
 baseUrl https://musicofapeople.com/
-scrollCssTag
 metaTags
+scrollCssTag
 scrollHeader
