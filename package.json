@@ -12,6 +12,6 @@
   },
   "homepage": "https://musicofapeople.com",
   "dependencies": {
-    "scroll-cli": "^51.0.0"
+    "scroll-cli": "^110.1.0"
   }
 }

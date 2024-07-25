@@ -1,31 +1,32 @@
 import header.scroll
 title La La Land Script
 date 2022/11/17
-groups index
-author https://www.instagram.com/breck7/ Breck Yunits
+tags index
+authors Breck Yunits
+ https://twitter.com/breckyunits
 
-startColumns 2
+> Note: eBay banned this sale for some reason. This auction is paused for now.
 
-* I'm selling my copy of the _La La Land_ script signed by Emma Stone and Ryan Gosling. 100% of proceeds will go to Cancer Research and 100% of proceeds will go to paying artists to create public domain mp3s for this website, MusicOfAPeople.com.
+mediumColumns 1
+
+I'm selling my copy of the _La La Land_ script signed by Emma Stone and Ryan Gosling. 100% of proceeds will go to Cancer Research and 100% of proceeds will go to paying artists to create public domain mp3s for this website, Music Of a People.
  dateline
  https://cancerdb.com/posts/david-fund.html Cancer Research
- link https://MusicOfAPeople.com MusicOfAPeople.com
+ link ../index.html Music Of a People
  https://www.imdb.com/name/nm1297015/ Emma Stone
  https://www.imdb.com/name/nm0331516/ Ryan Gosling
  https://www.imdb.com/title/tt3783958/ La La Land
 
 ? Wait, doesn't that add up to 200%?
-
-* Yes. I will personally provide the matching funds.
+Yes. I will personally provide the matching funds.
 
 # La La Land tied for the most nominated movie in Oscar History (14 nominations, 6 wins)
 
-html
- <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
  <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/8KeOxeuiZjs" title="'Moonlight' or 'La La Land'? Best Picture Mix-up at Oscars" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
  </div>
 
-* Bid for it on eBay or buy it instantly by sending $14,000 of NEAR to `cancerdb.near` or `musicofapeople.near`.
+Bid for it on eBay or buy it instantly by sending $14,000 of NEAR to `cancerdb.near` or `musicofapeople.near`.
  https://wallet.near.org/ NEAR
  https://www.ebay.com/itm/354398099957 Bid for it
 
@@ -38,4 +39,4 @@ image lalaBack.jpg
 image lalaUpdated.jpg
  caption When you own it you too can write whatever you want in it.
 
-scrollFooter
+pageFooter

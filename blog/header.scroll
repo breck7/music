@@ -1,12 +1,10 @@
 importOnly
-git https://github.com/breck7/MusicOfAPeople.com
-viewSourceBaseUrl https://github.com/breck7/MusicOfAPeople.com/blob/main/blog/
-email artists@musicofapeople.com
-baseUrl https://musicofapeople.com/blog/
-scrollCssTag
-scrollHeader
+viewSourceBaseUrl https://github.com/breck7/music/blob/main/blog/
+email music@publicdomaincompany.com
+baseUrl https://music.publicdomaincompany.com/blog/
+gazetteCss
+pageHeader
 metaTags
-
 css
  img {
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */

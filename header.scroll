@@ -1,9 +1,10 @@
 importOnly
-description a new music label from Public Domain Publishing Inc.
-git https://github.com/breck7/MusicOfAPeople.com
-viewSourceBaseUrl https://github.com/breck7/MusicOfAPeople.com/blob/main
-email artists@musicofapeople.com
-baseUrl https://musicofapeople.com/
+description A new music label from Public Domain Publishing Inc.
+viewSourceBaseUrl https://github.com/breck7/music/blob/main
+email music@publicdomaincompany.com
+baseUrl https://music.publicdomaincompany.com
 metaTags
-scrollCssTag
-scrollHeader
+gazetteCss
+pageHeader
+buildHtml
+printTitle

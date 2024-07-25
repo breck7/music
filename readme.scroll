@@ -2,35 +2,35 @@ import header.scroll
 title Music Of A People
 permalink about.html
 
-startColumns 2
+mediumColumns 1
 
-## A new music label from Public Domain Publishing.
- https://pd.pub Public Domain Publishing
+# A new music label from Public Domain Publishing.
+ https://publicdomaincompany.com Public Domain Publishing
 
 ? Who do we prioritize?
-* 1. Fans
-* 2. Artists
-* ...
-* ...
-* ...
-* N. Investors
+1. Fans
+2. Artists
+...
+...
+...
+N. Investors
 
 ? What do we believe?
-* We believe in music.
-* We believe in artists.
-* We believe music is best experienced live.
-* We believe vinyl is better than digital.
-* We believe digital music should have no (c)hains attached.
+- We believe in music.
+- We believe in artists.
+- We believe music is best experienced live.
+- We believe vinyl is better than digital.
+- We believe digital music should have no (c)hains attached.
 
 ? How do I make music for Music of a People?
-* Email us with your public domain songs.
-* If we love them we'll reply with a one time offer. We may even offer to pay for a few months so you can focus on doing your best work. We'll let you know either way.
-* We don't believe in exclusive deals and since your files are public domain you can do whatever the fuck you want with them.
-* In the future, we may expand to do more traditional publisher things inlcuding help you with concerts, vinyl record sales, merchandise, etc.
-* We will not sell mp3s or use any kind of DRM — fans come first and no fans want that. We want to make money together in the real world. Digital is just for spreading the word about you and your music.
+- Email us with your public domain songs.
+- If we love them we'll reply with a one time offer. We may even offer to pay for a few months so you can focus on doing your best work. We'll let you know either way.
+- We don't believe in exclusive deals and since your files are public domain you can do whatever the fuck you want with them.
+- In the future, we may expand to do more traditional publisher things inlcuding help you with concerts, vinyl record sales, merchandise, etc.
+- We will not sell mp3s or use any kind of DRM — fans come first and no fans want that. We want to make money together in the real world. Digital is just for spreading the word about you and your music.
 
 ? Do we have a blog?
-* Yes.
- link blog/ Yes
+Yes.
+ link blog/
 
-scrollFooter
+pageFooter
