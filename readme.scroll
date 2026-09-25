@@ -6,6 +6,10 @@ ipodSvgParser
   buildHtml() { return this.subparticlesToString() }
 
 title Music of a People
+baseUrl https://music.breck.lol/
+canonicalUrl https://music.breck.lol/
+openGraphImage https://music.breck.lol/og.jpg
+description A pocketful of music. Scroll, shuffle, and listen.
 permalink index.html
 buildHtml
 metaTags
