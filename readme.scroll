@@ -65,78 +65,6 @@ main
      id songs
      addClass songs
      aria-label Songs
-     button
-      addClass song
-      data-file U.S. Army Chorus - One Day More - 2026.mp4
-      data-artist U.S. Army Chorus
-      data-title One Day More
-      data-song one-day-more
-      data-year 2026
-      data-duration 123.796
-      span One Day More
-       addClass song-title
-      span U.S. Army Chorus
-       addClass song-artist
-     button
-      addClass song
-      data-file Alan Jabbour & Ken Perlman - Fire on the Mountain - 2012.mp3
-      data-artist Alan Jabbour &amp; Ken Perlman
-      data-title Fire on the Mountain
-      data-song fire-on-the-mountain
-      data-year 2012
-      data-duration 335.84
-      span Fire on the Mountain
-       addClass song-title
-      span Alan Jabbour &amp; Ken Perlman
-       addClass song-artist
-     button
-      addClass song
-      data-file Revenue Hefner - All On My Line - 2022.mp3
-      data-artist Revenue Hefner
-      data-title All On My Line
-      data-song all-on-my-line
-      data-year 2022
-      data-duration 257.985
-      span All On My Line
-       addClass song-title
-      span Revenue Hefner
-       addClass song-artist
-     button
-      addClass song
-      data-file Revenue Hefner - Pushin On' Foot - 2022.mp3
-      data-artist Revenue Hefner
-      data-title Pushin On’ Foot
-      data-song pushin-on-foot
-      data-year 2022
-      data-duration 174.194
-      span Pushin On’ Foot
-       addClass song-title
-      span Revenue Hefner
-       addClass song-artist
-     button
-      addClass song
-      data-file Justin Labbe - Less is More - 2023.mp3
-      data-artist Justin Labbe
-      data-title Less is More
-      data-song less-is-more
-      data-year 2023
-      data-duration 182.07345
-      span Less is More
-       addClass song-title
-      span Justin Labbe
-       addClass song-artist
-     button
-      addClass song
-      data-file Mint Tingle - Beaver Pleaser - 2012.m4a
-      data-artist Mint Tingle
-      data-title Beaver Pleaser
-      data-song beaver-pleaser
-      data-year 2012
-      data-duration 301.184
-      span Beaver Pleaser
-       addClass song-title
-      span Mint Tingle
-       addClass song-artist
     div
      addClass now
      span Ready when you are
@@ -233,6 +161,21 @@ css
  @media(min-width:1500px) { .player { width:400px; } }
  @media(max-width:700px) { body { background-position:45% 40%; } .masthead { padding:24px; } .edition { display:none; } .stage { min-height:auto; display:flex; flex-direction:column; gap:22px; padding:20px 24px 28px; } .introduction { align-self:center; padding:0; text-align:center; } h1 { font-size:40px; margin:10px 0; letter-spacing:-1.5px; } .introduction p { display:none; } .eyebrow { font-size:8px; } .player { width:min(340px,100%); } .footer { padding:18px 24px; justify-content:center; text-align:center; } .photo-credit { display:none; } }
  @media(prefers-reduced-motion:no-preference) { .player { animation:drop-in .9s cubic-bezier(.22,1,.36,1) both; } @keyframes drop-in { from { transform:translateY(calc(-100vh - 100%)); } to { transform:translateY(0); } } }
+
+catalog.js
+script
+ document.getElementById("songs").innerHTML = catalog.map(song => `
+   <button class="song"
+     data-file="${song.file}"
+     data-artist="${song.artist}"
+     data-title="${song.title}"
+     data-song="${song.id}"
+     data-year="${song.year}"
+     data-duration="${song.duration}">
+     <span class="song-title">${song.title}</span>
+     <span class="song-artist">${song.artist}</span>
+   </button>
+ `).join("");
 
 script
  (() => {
@@ -346,3 +289,5 @@ script
    window.addEventListener('hashchange', openLink);
    openLink();
  })();
+
+

@@ -1,0 +1,69 @@
+buildConcepts catalog.js catalog.json catalog.tsv catalog.csv
+
+idParser
+ extends abstractIdParser
+
+fileParser
+ extends abstractStringMeasureParser
+
+artistParser
+ extends abstractStringMeasureParser
+
+titleParser
+ extends abstractStringMeasureParser
+
+yearParser
+ extends abstractIntegerMeasureParser
+
+durationParser
+ extends abstractStringMeasureParser
+
+id one-day-more
+file U.S. Army Chorus - One Day More - 2026.mp4
+artist U.S. Army Chorus
+title One Day More
+year 2026
+duration 123
+
+id fire-on-the-mountain
+file Alan Jabbour & Ken Perlman - Fire on the Mountain - 2012.mp3
+artist Alan Jabbour & Ken Perlman
+title Fire on the Mountain
+year 2012
+duration 335
+
+id all-on-my-line
+file Revenue Hefner - All On My Line - 2022.mp3
+artist Revenue Hefner
+title All On My Line
+year 2022
+duration 257
+
+id pushin-on-foot
+file Revenue Hefner - Pushin On' Foot - 2022.mp3
+artist Revenue Hefner
+title Pushin On’ Foot
+year 2022
+duration 174
+
+id less-is-more
+file Justin Labbe - Less is More - 2023.mp3
+artist Justin Labbe
+title Less is More
+year 2023
+duration 182
+
+id beaver-pleaser
+file Mint Tingle - Beaver Pleaser - 2012.m4a
+artist Mint Tingle
+title Beaver Pleaser
+year 2012
+duration 301
+
+id ghost
+file Howie Day - Ghost - 2023 Hawaii Blue Note.m4a
+artist Howie Day
+title Ghost
+year 2023
+duration 536
+

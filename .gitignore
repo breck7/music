@@ -1,1 +1,7 @@
 .DS_Store
+*.csv
+*.html
+*.txt
+*.json
+*.js
+*.tsv
