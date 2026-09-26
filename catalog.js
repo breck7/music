@@ -1,0 +1,58 @@
+const catalog = [
+  {
+    "id": "one-day-more",
+    "title": "One Day More",
+    "file": "U.S. Army Chorus - One Day More - 2026.mp4",
+    "artist": "U.S. Army Chorus",
+    "year": 2026,
+    "duration": "123"
+  },
+  {
+    "id": "fire-on-the-mountain",
+    "title": "Fire on the Mountain",
+    "file": "Alan Jabbour & Ken Perlman - Fire on the Mountain - 2012.mp3",
+    "artist": "Alan Jabbour & Ken Perlman",
+    "year": 2012,
+    "duration": "335"
+  },
+  {
+    "id": "all-on-my-line",
+    "title": "All On My Line",
+    "file": "Revenue Hefner - All On My Line - 2022.mp3",
+    "artist": "Revenue Hefner",
+    "year": 2022,
+    "duration": "257"
+  },
+  {
+    "id": "pushin-on-foot",
+    "title": "Pushin On’ Foot",
+    "file": "Revenue Hefner - Pushin On' Foot - 2022.mp3",
+    "artist": "Revenue Hefner",
+    "year": 2022,
+    "duration": "174"
+  },
+  {
+    "id": "less-is-more",
+    "title": "Less is More",
+    "file": "Justin Labbe - Less is More - 2023.mp3",
+    "artist": "Justin Labbe",
+    "year": 2023,
+    "duration": "182"
+  },
+  {
+    "id": "beaver-pleaser",
+    "title": "Beaver Pleaser",
+    "file": "Mint Tingle - Beaver Pleaser - 2012.m4a",
+    "artist": "Mint Tingle",
+    "year": 2012,
+    "duration": "301"
+  },
+  {
+    "id": "ghost",
+    "title": "Ghost",
+    "file": "Howie Day - Ghost - 2023 Hawaii Blue Note.m4a",
+    "artist": "Howie Day",
+    "year": 2023,
+    "duration": "536"
+  }
+]
