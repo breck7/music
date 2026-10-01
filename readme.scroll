@@ -135,7 +135,7 @@ css
  .statusbar span:last-child::after { content:''; position:absolute; right:-4px; top:2px; width:2px; height:6px; background:var(--ink); }
  .songs { flex:1; min-height:0; overflow-y:auto; overscroll-behavior:contain; scrollbar-width:thin; scrollbar-color:#526148 #abbc94; padding:3px 0; }
  button { font:inherit; cursor:pointer; -webkit-tap-highlight-color:transparent; }
- .song { width:100%; display:block; text-align:left; border:0; color:inherit; background:transparent; padding:5px 7px; position:relative; line-height:1.1; }
+ .song { width:100%; display:block; text-align:left; border:0; color:inherit; background:transparent; padding:5px 7px; position:relative; line-height:1.1; text-decoration:none; cursor:pointer; }
  .song-title { display:block; font-size:12px; font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; padding-right:8px; }
  .song-artist { display:block; font-size:9px; padding-top:3px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
  .song:hover,.song.selected { background:var(--ink); color:var(--lcd); }
@@ -165,7 +165,8 @@ css
 catalog.js
 script
  document.getElementById("songs").innerHTML = catalog.map(song => `
-   <button class="song"
+   <a class="song"
+     href="${encodeURIComponent(song.file)}"
      data-file="${song.file}"
      data-artist="${song.artist}"
      data-title="${song.title}"
@@ -174,7 +175,7 @@ script
      data-duration="${song.duration}">
      <span class="song-title">${song.title}</span>
      <span class="song-artist">${song.artist}</span>
-   </button>
+   </a>
  `).join("");
 
 script
@@ -242,7 +243,7 @@ script
      try { await audio.play(); if(token === request) render(); }
      catch(error) { if(token !== request || error.name === 'AbortError') return; if(error.name === 'NotAllowedError') { autoplayBlocked = true; render(); } else { $('now-title').textContent = 'Could not play this file'; $('now-detail').textContent = 'Select a song to try again'; } }
    }
-   songs.forEach((button, i) => button.addEventListener('click', () => play(i)));
+   songs.forEach((link, i) => link.addEventListener('click', e => { e.preventDefault(); play(i); }));
    $('select').onclick = () => play(selected);
    $('toggle').onclick = () => play(current < 0 ? selected : current);
    $('next').onclick = () => play((current + 1) % songs.length);
