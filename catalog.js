@@ -54,5 +54,13 @@ const catalog = [
     "artist": "Howie Day",
     "year": 2023,
     "duration": "536"
+  },
+  {
+    "id": "onvacation",
+    "title": "On Vacation for a Week",
+    "file": "onVacationForAWeekLeesYunits.m4a",
+    "artist": "Lees Yunits",
+    "year": 1989,
+    "duration": "120"
   }
 ]
