@@ -16,14 +16,6 @@ const catalog = [
     "duration": "335"
   },
   {
-    "id": "all-on-my-line",
-    "title": "All On My Line",
-    "file": "Revenue Hefner - All On My Line - 2022.mp3",
-    "artist": "Revenue Hefner",
-    "year": 2022,
-    "duration": "257"
-  },
-  {
     "id": "pushin-on-foot",
     "title": "Pushin On’ Foot",
     "file": "Revenue Hefner - Pushin On' Foot - 2022.mp3",
