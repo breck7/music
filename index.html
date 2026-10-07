@@ -36,11 +36,13 @@
  <circle cx="200" cy="467" r="112" fill="url(#wheel)" stroke="#e5e5df"/>
  <circle cx="200" cy="467" r="55" fill="#d4d5cc"/>
  <circle cx="200" cy="466" r="52" fill="url(#center)" stroke="#fff"/>
- <g stroke="#96998e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M188 375h3c7 0 11 14 18 14h3m-5-4 5 4-5 4M188 389h3c3 0 6-3 8-7m3-4c2-2 4-3 7-3h3m-5-4 5 4-5 4"/></g>
+ <g class="repeat-glyph" stroke="#96998e" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" fill="none" transform="translate(186 370) scale(1.15)"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/><text class="repeat-one" x="12" y="15" text-anchor="middle" font-size="8" font-family="'Courier New',monospace" font-weight="bold" fill="#96998e" stroke="none">1</text></g>
+ <g stroke="#96998e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="translate(-41.2 5.2) scale(1.2)"><path d="M188 375h3c7 0 11 14 18 14h3m-5-4 5 4-5 4M188 389h3c3 0 6-3 8-7m3-4c2-2 4-3 7-3h3m-5-4 5 4-5 4"/></g>
  <g fill="#989b91"><path d="M103 460h3v14h-3zm4 7 10-7v14zm11 0 10-7v14z"/><path d="m273 460 10 7-10 7zm11 0 10 7-10 7zm11 0h3v14h-3z"/><path d="m187 549 12 7-12 7zm16 0h3v14h-3zm7 0h3v14h-3z"/></g>
 </svg>
 <div id="particle2" class="screen"><div id="particle1" class="statusbar"><span id="particle1" >Music</span>
-<span id="particle2" aria-label="Battery full" >▰</span></div>
+<span id="repeat-flag" ><p id="particle1" class="scrollParagraph">aria-live polite</p></span>
+<span id="particle3" aria-label="Battery full" >▰</span></div>
 <div id="songs" aria-label="Songs" class="songs"></div>
 <div id="particle3" class="now"><span id="now-title" >Ready when you are</span>
 <span id="now-detail" >Select a song to play</span>
@@ -48,11 +50,11 @@
 <div id="particle4" class="times"><span id="elapsed" >0:00</span>
 <span id="remaining" >6 songs</span></div></div></div>
 <div id="wheel" aria-label="Scroll wheel; use mouse wheel or drag around the ring" class="wheel-touch"></div>
-<button id="shuffle" aria-label="Play a random song" class="shuffle"></button>
+<button id="repeat" aria-label="Repeat off; press to change repeat mode" class="repeat"></button>
 <button id="previous" aria-label="Previous song" class="previous"></button>
 <button id="next" aria-label="Next song" class="next"></button>
 <button id="toggle" aria-label="Play or pause" class="toggle"></button>
-<button id="select" aria-label="Play selected song" class="select"></button></div></section></main>
+<button id="shuffle" aria-label="Play a random song" class="shuffle"></button></div></section></main>
 <style>* { box-sizing: border-box; }
 :root { color-scheme: light; --ink: #263124; --lcd: #c0cda5; }
 html { min-height:100%; background:#afa28c; }
@@ -93,11 +95,16 @@ button:focus-visible,a:focus-visible,input:focus-visible { outline:2px solid cur
 .wheel-touch { position:absolute; left:22%; top:54.1%; width:56%; height:34.5%; border-radius:50%; touch-action:none; }
 .ipod > button { position:absolute; border:0; background:transparent; color:#5c655a; border-radius:50%; padding:0; }
 .ipod > button:active { background:#909d861c; box-shadow:inset 0 1px 5px #0001; }
-.shuffle { left:40%; top:55%; width:20%; height:8%; }
+.repeat { left:40%; top:55%; width:20%; height:8%; }
 .previous { left:23%; top:66%; width:16%; height:12%; }
 .next { right:23%; top:66%; width:16%; height:12%; }
 .toggle { left:40%; top:80%; width:20%; height:8%; }
-.select { left:37%; top:63.7%; width:26%; height:16%; }
+.shuffle { left:37%; top:63.7%; width:26%; height:16%; }
+.repeat-glyph { opacity:.3; transition:opacity .18s; }
+.repeat-glyph.on { opacity:1; }
+.repeat-one { display:none; }
+.repeat-one.on { display:inline; }
+#repeat-flag { font-size:12px; }
 .hint { text-align:center; font-size:10px; letter-spacing:1.2px; margin:22px 0 0; text-shadow:0 2px 10px #222; }
 .footer { padding-top:16px; padding-bottom:22px; font-size:9px; letter-spacing:1px; }
 .photo-credit { font-size:8px; opacity:.75; }
@@ -163,7 +170,6 @@ button:focus-visible,a:focus-visible,input:focus-visible { outline:2px solid cur
     $('now-title').textContent = `${audio.paused ? 'Ⅱ' : '▶'} ${s.title}`;
     $('now-detail').textContent = autoplayBlocked ? 'Press play to start here' : `${s.artist} · ${s.year}`;
     $('toggle').setAttribute('aria-label', audio.paused ? 'Play' : 'Pause');
-    $('select').setAttribute('aria-label', selected === current ? (audio.paused ? 'Play' : 'Pause') : `Play ${songs[selected].dataset.title}`);
   }
   async function play(index, startTime = null) {
     if (index < 0 || index >= songs.length) return;
@@ -183,7 +189,27 @@ button:focus-visible,a:focus-visible,input:focus-visible { outline:2px solid cur
     catch(error) { if(token !== request || error.name === 'AbortError') return; if(error.name === 'NotAllowedError') { autoplayBlocked = true; render(); } else { $('now-title').textContent = 'Could not play this file'; $('now-detail').textContent = 'Select a song to try again'; } }
   }
   songs.forEach((link, i) => link.addEventListener('click', e => { e.preventDefault(); play(i); }));
-  $('select').onclick = () => play(selected);
+  const repeatModes = [
+    { label: 'Repeat off', flag: '' },
+    { label: 'Repeat all songs', flag: '↻ ALL' },
+    { label: 'Repeat this song', flag: '↻ 1' },
+  ];
+  let repeat = 0, repeatTimer;
+  function applyRepeat() {
+    const mode = repeatModes[repeat];
+    $('repeat').setAttribute('aria-label', `${mode.label}; press to change`);
+    $('repeat-flag').textContent = mode.flag;
+    document.querySelector('.repeat-glyph').classList.toggle('on', repeat > 0);
+    document.querySelector('.repeat-one').classList.toggle('on', repeat === 2);
+  }
+  $('repeat').onclick = () => {
+    repeat = (repeat + 1) % repeatModes.length;
+    applyRepeat();
+    $('now-detail').textContent = repeatModes[repeat].label;
+    clearTimeout(repeatTimer);
+    repeatTimer = setTimeout(() => { if (current < 0) $('now-detail').textContent = 'Select a song to play'; else render(); }, 1600);
+  };
+  applyRepeat();
   $('toggle').onclick = () => play(current < 0 ? selected : current);
   $('next').onclick = () => play((current + 1) % songs.length);
   $('previous').onclick = () => { if(audio.currentTime > 3) audio.currentTime = 0; else play((current <= 0 ? songs.length : current) - 1); };
@@ -201,7 +227,7 @@ button:focus-visible,a:focus-visible,input:focus-visible { outline:2px solid cur
   audio.addEventListener('pause', updateLink);
   ['play','pause','loadedmetadata'].forEach(event => audio.addEventListener(event, render));
   audio.addEventListener('error', () => { $('now-title').textContent = 'Unable to load song'; $('now-detail').textContent = 'Check that the music file is available'; });
-  audio.addEventListener('ended', () => { if(current < songs.length - 1) play(current + 1); else render(); });
+  audio.addEventListener('ended', () => { if(repeat === 2) play(current, 0); else if(current < songs.length - 1) play(current + 1); else if(repeat === 1) play(0); else render(); });
   let wheelDelta = 0;
   const wheel = $('wheel');
   document.querySelector('.ipod').addEventListener('wheel', e => {
