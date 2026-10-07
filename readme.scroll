@@ -9,6 +9,7 @@ title Music of a People
 baseUrl https://music.breck.lol/
 canonicalUrl https://music.breck.lol/
 openGraphImage https://music.breck.lol/og.jpg
+favicon favicon.png
 description A pocketful of music. Scroll, shuffle, and listen.
 permalink index.html
 buildHtml
