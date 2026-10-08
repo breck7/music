@@ -19,7 +19,8 @@
  <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
-<main id="particle22" class="stage"><section id="particle1" class="introduction"><h1 id="particle1" ><a href="https://github.com/breck7/music">Music of a People</a></h1></section>
+<style>.abstractIconButtonParser {position:absolute;top:0.25rem; }.abstractIconButtonParser svg {fill: rgba(204,204,204,.8);width:1.875rem;height:1.875rem; padding: 0 7px;} .abstractIconButtonParser:hover svg{fill: #333;}</style><a href="https://github.com/breck7/music" class="doNotPrint abstractIconButtonParser" style="position:fixed; right:2rem; top:1.5rem; z-index:10;"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Source code on GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+<main id="particle26" class="stage"><section id="particle1" class="introduction"><h1 id="particle1" ><a href="https://github.com/breck7/music">Music of a People</a></h1></section>
 <section id="particle2" aria-label="iPod music player" class="player"><div id="particle2" class="ipod"><svg class="shell" viewBox="0 0 400 650" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
  <defs>
   <linearGradient id="chrome" x1="0" y1="0" x2="400" y2="650" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset=".15" stop-color="#b8b9b7"/><stop offset=".27" stop-color="#fbfbf7"/><stop offset=".6" stop-color="#999b99"/><stop offset=".83" stop-color="#eee"/><stop offset="1" stop-color="#858780"/></linearGradient>
@@ -61,56 +62,9 @@ html { min-height:100%; background:#afa28c; }
 body { margin:0; min-height:100svh; font-family:Arial,Helvetica,sans-serif; color:#f8f5eb; background:linear-gradient(90deg,rgba(22,26,21,.37),rgba(22,26,21,.04) 55%,rgba(22,26,21,.17)),url('bg.jpg') center 42% / cover fixed; }
 body::before { content:''; position:fixed; inset:0; background:linear-gradient(0deg,rgba(22,26,21,.5),transparent 24%,transparent 83%,rgba(22,26,21,.2)); pointer-events:none; }
 a { color:inherit; text-decoration:none; }
-a:hover { text-decoration:underline; text-underline-offset:4px; }
-.masthead,.footer { position:relative; display:flex; align-items:center; justify-content:space-between; padding:32px 4vw; gap:16px; font-size:10px; letter-spacing:1.7px; }
-.masthead a { font-size:14px; font-weight:700; letter-spacing:3px; }
-.edition { opacity:.85; }
-.stage { position:relative; min-height:100svh; display:grid; grid-template-columns:1fr 1fr; align-items:center; padding:26px 10vw 36px 7vw; gap:40px; }
-.introduction { align-self:end; padding-bottom:68px; text-shadow:0 2px 25px #3e3c34; }
-.eyebrow { font-size:10px; letter-spacing:3px; }
-h1 { font-family:Georgia,'Times New Roman',serif; font-size:clamp(38px,5vw,76px); font-weight:400; letter-spacing:-3px; line-height:1.03; margin:17px 0; }
-.introduction p { font-size:13px; letter-spacing:.2px; opacity:.88; }
-.player { justify-self:end; width:min(360px,100%); }
-.ipod { position:relative; width:100%; aspect-ratio:400 / 650; filter:drop-shadow(10px 30px 28px #171b1955); }
-.shell { display:block; width:100%; height:100%; }
-.screen { position:absolute; left:12.5%; top:9.23%; width:75%; height:38.6%; background:var(--lcd); color:var(--ink); border-radius:4px; box-shadow:inset 1px 3px 8px #26312465; padding:7px 7px 5px; font-family:'Courier New',monospace; display:flex; flex-direction:column; overflow:hidden; }
-.screen::after { content:''; position:absolute; inset:0; pointer-events:none; opacity:.10; background:repeating-linear-gradient(0deg,transparent,transparent 2px,#475840 3px); }
-.statusbar { display:flex; justify-content:space-between; align-items:center; font-weight:bold; font-size:14px; border-bottom:2px solid var(--ink); padding:0 4px 4px; }
-.statusbar span:last-child { border:1px solid var(--ink); line-height:10px; padding:0 2px; font-size:13px; margin-right:3px; position:relative; }
-.statusbar span:last-child::after { content:''; position:absolute; right:-4px; top:2px; width:2px; height:6px; background:var(--ink); }
-.songs { flex:1; min-height:0; overflow-y:auto; overscroll-behavior:contain; scrollbar-width:thin; scrollbar-color:#526148 #abbc94; padding:3px 0; }
-button { font:inherit; cursor:pointer; -webkit-tap-highlight-color:transparent; }
-.song { width:100%; display:block; text-align:left; border:0; color:inherit; background:transparent; padding:5px 7px; position:relative; line-height:1.1; text-decoration:none; cursor:pointer; }
-.song-title { display:block; font-size:12px; font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; padding-right:8px; }
-.song-artist { display:block; font-size:9px; padding-top:3px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-.song:hover,.song.selected { background:var(--ink); color:var(--lcd); }
-.song.selected::after { content:'›'; position:absolute; right:5px; top:4px; font-size:20px; }
-button:focus-visible,a:focus-visible,input:focus-visible { outline:2px solid currentColor; outline-offset:2px; }
-.song:focus-visible { outline-offset:-2px; }
-.now { border-top:1px solid #526148; padding:5px 3px 0; flex-shrink:0; }
-#now-title { display:block; font-size:10px; font-weight:bold; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-#now-detail { display:block; font-size:9px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; margin:3px 0; }
-#seek { width:100%; height:10px; margin:0; accent-color:var(--ink); display:block; cursor:pointer; }
-.times { display:flex; justify-content:space-between; font-size:9px; margin-top:3px; }
-.wheel-touch { position:absolute; left:22%; top:54.1%; width:56%; height:34.5%; border-radius:50%; touch-action:none; }
-.ipod > button { position:absolute; border:0; background:transparent; color:#5c655a; border-radius:50%; padding:0; }
-.ipod > button:active { background:#909d861c; box-shadow:inset 0 1px 5px #0001; }
-.repeat { left:40%; top:55%; width:20%; height:8%; }
-.previous { left:23%; top:66%; width:16%; height:12%; }
-.next { right:23%; top:66%; width:16%; height:12%; }
-.toggle { left:40%; top:80%; width:20%; height:8%; }
-.shuffle { left:37%; top:63.7%; width:26%; height:16%; }
-.repeat-glyph { opacity:.3; transition:opacity .18s; }
-.repeat-glyph.on { opacity:1; }
-.repeat-one { display:none; }
-.repeat-one.on { display:inline; }
-#repeat-flag { font-size:12px; }
-.hint { text-align:center; font-size:10px; letter-spacing:1.2px; margin:22px 0 0; text-shadow:0 2px 10px #222; }
-.footer { padding-top:16px; padding-bottom:22px; font-size:9px; letter-spacing:1px; }
-.photo-credit { font-size:8px; opacity:.75; }
-@media(min-width:1500px) { .player { width:400px; } }
-@media(max-width:700px) { body { background-position:45% 40%; } .masthead { padding:24px; } .edition { display:none; } .stage { min-height:auto; display:flex; flex-direction:column; gap:22px; padding:20px 24px 28px; } .introduction { align-self:center; padding:0; text-align:center; } h1 { font-size:40px; margin:10px 0; letter-spacing:-1.5px; } .introduction p { display:none; } .eyebrow { font-size:8px; } .player { width:min(340px,100%); } .footer { padding:18px 24px; justify-content:center; text-align:center; } .photo-credit { display:none; } }
-@media(prefers-reduced-motion:no-preference) { .player { animation:drop-in .9s cubic-bezier(.22,1,.36,1) both; } @keyframes drop-in { from { transform:translateY(calc(-100vh - 100%)); } to { transform:translateY(0); } } }</style>
+a:hover { text-decoration:underline; text-underline-offset:4px; }</style>
+<p id="particle29" class="scrollParagraph">body .abstractIconButtonParser svg { fill: rgba(248,245,235,.85); transition:fill .18s; }</p>
+<p id="particle30" class="scrollParagraph">body .abstractIconButtonParser:hover svg { fill:#fff; }</p>
 <script  src="catalog.js"></script>
 <script>document.getElementById("songs").innerHTML = catalog.map(song => `
   <a class="song"
