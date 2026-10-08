@@ -22,6 +22,7 @@ metaTags
 // Justin Labbe (2023) and Mint Tingle (2012): supplied by the collection owner.
 // Revenue Hefner song years (2022): confirmed by the collection owner.
 // One Day More: 2026 state-dinner clip, per supplied article and file comment. Performed by U.S. Army Chorus, confirmed by the collection owner.
+// Every Picture Tells a Story: Kerry Muzzey, from The Architect (2014); live performance recorded at AIR Lyndhurst with the Chamber Orchestra of London.
 // SVG is inline because the installed Scroll compiler has no native SVG element parser.
 
 main
@@ -87,7 +88,7 @@ main
       addClass times
       span 0:00
        id elapsed
-      span 6 songs
+      span 7 songs
        id remaining
    div
     id wheel

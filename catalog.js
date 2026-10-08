@@ -54,5 +54,13 @@ const catalog = [
     "artist": "Lees Yunits",
     "year": 1989,
     "duration": "120"
+  },
+  {
+    "id": "every-picture-tells-a-story",
+    "title": "Every Picture Tells a Story",
+    "file": "Kerry Muzzey - Every Picture Tells a Story - 2014.m4a",
+    "artist": "Kerry Muzzey",
+    "year": 2014,
+    "duration": "314"
   }
 ]
