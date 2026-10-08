@@ -136,8 +136,8 @@ css
  body::before { content:''; position:fixed; inset:0; background:linear-gradient(0deg,rgba(22,26,21,.5),transparent 24%,transparent 83%,rgba(22,26,21,.2)); pointer-events:none; }
  a { color:inherit; text-decoration:none; }
  a:hover { text-decoration:underline; text-underline-offset:4px; }
-body .abstractIconButtonParser svg { fill: rgba(248,245,235,.85); transition:fill .18s; }
-body .abstractIconButtonParser:hover svg { fill:#fff; }
+ body .abstractIconButtonParser svg { fill: rgba(248,245,235,.85); transition:fill .18s; }
+ body .abstractIconButtonParser:hover svg { fill:#fff; }
  .masthead,.footer { position:relative; display:flex; align-items:center; justify-content:space-between; padding:32px 4vw; gap:16px; font-size:10px; letter-spacing:1.7px; }
  .masthead a { font-size:14px; font-weight:700; letter-spacing:3px; }
  .edition { opacity:.85; }
