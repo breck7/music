@@ -62,5 +62,13 @@
     "artist": "Kerry Muzzey",
     "year": 2014,
     "duration": "314"
+  },
+  {
+    "id": "bobcaygeon",
+    "title": "Bobcaygeon",
+    "file": "The Tragically Hip - Bobcaygeon.mp3",
+    "artist": "The Tragically Hip",
+    "year": 1998,
+    "duration": "295"
   }
 ]
