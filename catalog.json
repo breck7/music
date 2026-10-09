@@ -70,5 +70,13 @@
     "artist": "The Tragically Hip",
     "year": 1998,
     "duration": "295"
+  },
+  {
+    "id": "fireplace-sounds",
+    "title": "Fireplace Sounds",
+    "file": "Fireplace Sounds - Breck Yunits - 2026 - Hawaii.m4a",
+    "artist": "Breck Yunits",
+    "year": 2026,
+    "duration": "611"
   }
 ]

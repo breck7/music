@@ -102,7 +102,7 @@ main
       addClass times
       span 0:00
        id elapsed
-      span 9 songs
+      span 10 songs
        id remaining
    div
     id wheel
