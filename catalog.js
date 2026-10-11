@@ -78,5 +78,13 @@ const catalog = [
     "artist": "Breck Yunits",
     "year": 2026,
     "duration": "611"
+  },
+  {
+    "id": "rendezvous",
+    "title": "Rendezvous",
+    "file": "Rendezvous - Duva.mp4",
+    "artist": "Duva",
+    "year": 2026,
+    "duration": "203"
   }
 ]
