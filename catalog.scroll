@@ -18,6 +18,12 @@ yearParser
 durationParser
  extends abstractStringMeasureParser
 
+urlParser
+ extends abstractUrlMeasureParser
+
+recordedParser
+ extends abstractStringMeasureParser
+
 id one-day-more
 file U.S. Army Chorus - One Day More - 2026.mp4
 artist U.S. Army Chorus
@@ -94,3 +100,12 @@ artist Duva
 title Rendezvous
 year 2026
 duration 203
+
+id champagne-supernova
+file Tad Jennings - Champagne Supernova (cover) - 2026 Turtle Bay Hawaii.m4a
+artist Tad Jennings
+title Champagne Supernova (cover)
+year 2026
+duration 169
+url https://www.tadjennings.com/
+recorded Oct 13, 2026 at Turtle Bay, Oahu, Hawaii by Breck Yunits

@@ -86,5 +86,15 @@
     "artist": "Duva",
     "year": 2026,
     "duration": "203"
+  },
+  {
+    "id": "champagne-supernova",
+    "title": "Champagne Supernova (cover)",
+    "file": "Tad Jennings - Champagne Supernova (cover) - 2026 Turtle Bay Hawaii.m4a",
+    "artist": "Tad Jennings",
+    "year": 2026,
+    "duration": "169",
+    "url": "https://www.tadjennings.com/",
+    "recorded": "Oct 13, 2026 at Turtle Bay, Oahu, Hawaii by Breck Yunits"
   }
 ]
