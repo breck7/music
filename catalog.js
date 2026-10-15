@@ -96,5 +96,13 @@ const catalog = [
     "duration": "169",
     "url": "https://www.tadjennings.com/",
     "recorded": "Oct 13, 2026 at Turtle Bay, Oahu, Hawaii by Breck Yunits"
+  },
+  {
+    "id": "ozone",
+    "title": "Dragostea din tei",
+    "file": "Ozone - Dragostea din tei.m4a",
+    "artist": "Ozone",
+    "year": 2003,
+    "duration": "209"
   }
 ]
