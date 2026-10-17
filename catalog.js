@@ -104,5 +104,13 @@ const catalog = [
     "artist": "Ozone",
     "year": 2003,
     "duration": "209"
+  },
+  {
+    "id": "he-got-game",
+    "title": "He Got Game",
+    "file": "Public Enemy - He Got Game.m4a",
+    "artist": "Public Enemy",
+    "year": 1998,
+    "duration": "239"
   }
 ]
