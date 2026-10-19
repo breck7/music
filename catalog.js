@@ -112,5 +112,14 @@ const catalog = [
     "artist": "Public Enemy",
     "year": 1998,
     "duration": "239"
+  },
+  {
+    "id": "i-would-die-4-u",
+    "title": "I Would Die 4 U (Prince Cover)",
+    "file": "Goose - I Would Die 4 U (Prince Cover) - 2024.m4a",
+    "artist": "Goose",
+    "year": 2024,
+    "duration": "140",
+    "url": "https://x.com/902Vickers/status/1831854551697387582"
   }
 ]
