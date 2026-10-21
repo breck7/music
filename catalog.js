@@ -130,5 +130,13 @@ const catalog = [
     "year": 2018,
     "duration": "578",
     "recorded": "Live in Israel 2018"
+  },
+  {
+    "id": "im-alright",
+    "title": "I'm Alright",
+    "file": "Kenny Loggins - I'm Alright - 1980.m4a",
+    "artist": "Kenny Loggins",
+    "year": 1980,
+    "duration": "224"
   }
 ]
