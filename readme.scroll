@@ -346,3 +346,6 @@ script
  })();
 
 
+
+// Skills
+// Add a song: name the file "Artist - Title - Year", append it as the last entry in catalog.scroll (id, title, artist, year, duration via ffprobe, file; optional url, recorded), then run scroll build to regenerate catalog json/tsv/csv/js. Don't commit.
