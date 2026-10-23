@@ -138,5 +138,13 @@
     "artist": "Kenny Loggins",
     "year": 1980,
     "duration": "224"
+  },
+  {
+    "id": "i-wanna-know-what-love-is",
+    "title": "I Wanna Know What Love Is",
+    "file": "Foreigner - I Wanna Know What Love Is - 1984.mp3",
+    "artist": "Foreigner",
+    "year": 1984,
+    "duration": "255"
   }
 ]
