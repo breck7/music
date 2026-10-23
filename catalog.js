@@ -90,7 +90,7 @@ const catalog = [
   {
     "id": "champagne-supernova",
     "title": "Champagne Supernova (cover)",
-    "file": "Tad Jennings - Champagne Supernova (Oasis cover) - 2026 Turtle Bay Hawaii.m4a",
+    "file": "Tad Jennings - Champagne Supernova (cover) - 2026 Turtle Bay Hawaii.m4a",
     "artist": "Tad Jennings",
     "year": 2026,
     "duration": "169",
