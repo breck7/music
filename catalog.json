@@ -146,5 +146,14 @@
     "artist": "Foreigner",
     "year": 1984,
     "duration": "255"
+  },
+  {
+    "id": "heart-of-gold",
+    "title": "Heart of Gold (Live at BBC)",
+    "file": "Neil Young - Heart of Gold (Live at BBC) - 1971.m4a",
+    "artist": "Neil Young",
+    "year": 1971,
+    "duration": "212",
+    "recorded": "Live at BBC 1971"
   }
 ]
