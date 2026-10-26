@@ -172,5 +172,13 @@ const catalog = [
     "year": 1994,
     "duration": "263",
     "recorded": "Live at Shoreline Amphitheatre 1994"
+  },
+  {
+    "id": "the-distance",
+    "title": "The Distance",
+    "file": "Cake - The Distance - 1996.m4a",
+    "artist": "Cake",
+    "year": 1996,
+    "duration": "181"
   }
 ]
