@@ -163,5 +163,14 @@ const catalog = [
     "artist": "Israel Kamakawiwoʻole",
     "year": 1993,
     "duration": "210"
+  },
+  {
+    "id": "fade-into-you",
+    "title": "Fade Into You",
+    "file": "Mazzy Star - Fade Into You (Live at Shoreline Amphitheatre) - 1994.m4a",
+    "artist": "Mazzy Star",
+    "year": 1994,
+    "duration": "263",
+    "recorded": "Live at Shoreline Amphitheatre 1994"
   }
 ]
