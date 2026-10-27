@@ -180,5 +180,13 @@ const catalog = [
     "artist": "Cake",
     "year": 1996,
     "duration": "181"
+  },
+  {
+    "id": "chariots-of-fire",
+    "title": "Chariots of Fire",
+    "file": "Vangelis - Chariots of Fire - 1981.m4a",
+    "artist": "Vangelis",
+    "year": 1981,
+    "duration": "208"
   }
 ]
