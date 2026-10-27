@@ -196,5 +196,13 @@ const catalog = [
     "artist": "Daniel Ho",
     "year": 2026,
     "duration": "280"
+  },
+  {
+    "id": "kids",
+    "title": "Kids",
+    "file": "MGMT - Kids - 2007.m4a",
+    "artist": "MGMT",
+    "year": 2007,
+    "duration": "302"
   }
 ]
