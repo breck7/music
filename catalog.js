@@ -212,5 +212,14 @@ const catalog = [
     "artist": "The Byrds",
     "year": 1965,
     "duration": "235"
+  },
+  {
+    "id": "glycerine",
+    "title": "Glycerine",
+    "file": "Bush - Glycerine - Live at Woodstock 1999.m4a",
+    "artist": "Bush",
+    "year": 1999,
+    "duration": "292",
+    "recorded": "Live at Woodstock 1999"
   }
 ]
