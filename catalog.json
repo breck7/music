@@ -238,5 +238,15 @@
     "artist": "Simon & Garfunkel",
     "year": 1965,
     "duration": "185"
+  },
+  {
+    "id": "pink-pony-club",
+    "title": "Pink Pony Club",
+    "file": "Chappell Roan - Pink Pony Club - Live at the 67th Grammy Awards 2025.m4a",
+    "artist": "Chappell Roan",
+    "year": 2025,
+    "duration": "275",
+    "url": "https://www.youtube.com/watch?v=i79Gly1ZM5w",
+    "recorded": "Live at the 67th Grammy Awards 2025"
   }
 ]
