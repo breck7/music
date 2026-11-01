@@ -230,5 +230,13 @@ const catalog = [
     "year": 1991,
     "duration": "264",
     "url": "https://www.youtube.com/watch?v=4Fc67yQsPqQ"
+  },
+  {
+    "id": "the-sounds-of-silence",
+    "title": "The Sounds of Silence",
+    "file": "Simon & Garfunkel - The Sounds of Silence - 1965.m4a",
+    "artist": "Simon & Garfunkel",
+    "year": 1965,
+    "duration": "185"
   }
 ]
