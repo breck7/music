@@ -248,5 +248,14 @@ const catalog = [
     "duration": "275",
     "url": "https://www.youtube.com/watch?v=i79Gly1ZM5w",
     "recorded": "Live at the 67th Grammy Awards 2025"
+  },
+  {
+    "id": "age-of-aquarius",
+    "title": "Age of Aquarius",
+    "file": "The 5th Dimension - Age of Aquarius - 1969.m4a",
+    "artist": "The 5th Dimension",
+    "year": 1969,
+    "duration": "229",
+    "url": "https://www.youtube.com/watch?v=kjxSCAalsBE"
   }
 ]
