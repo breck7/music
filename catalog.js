@@ -257,5 +257,15 @@ const catalog = [
     "year": 1969,
     "duration": "229",
     "url": "https://www.youtube.com/watch?v=kjxSCAalsBE"
+  },
+  {
+    "id": "monday-circle-song",
+    "title": "Monday Circle Song",
+    "file": "Circle Song - Monday Circle Song - Live 2026.m4a",
+    "artist": "Circle Song",
+    "year": 2026,
+    "duration": "407",
+    "url": "https://x.com/cyantist/status/2117788651069567071",
+    "recorded": "Live at a circle song, Nov 2026, first note sung by Diana; shared by Cyan Banister"
   }
 ]
