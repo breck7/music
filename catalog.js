@@ -267,5 +267,14 @@ const catalog = [
     "duration": "407",
     "url": "https://x.com/cyantist/status/2117788651069567071",
     "recorded": "Live at a circle song, Nov 2026, first note sung by Diana; shared by Cyan Banister"
+  },
+  {
+    "id": "i-took-a-pill-in-ibiza",
+    "title": "I Took a Pill in Ibiza (Seeb Remix)",
+    "file": "Mike Posner - I Took a Pill in Ibiza (Seeb Remix) - 2016.m4a",
+    "artist": "Mike Posner",
+    "year": 2016,
+    "duration": "209",
+    "url": "https://www.youtube.com/watch?v=foE1mO2yM04"
   }
 ]
