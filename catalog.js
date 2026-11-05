@@ -276,5 +276,14 @@ const catalog = [
     "year": 2016,
     "duration": "209",
     "url": "https://www.youtube.com/watch?v=foE1mO2yM04"
+  },
+  {
+    "id": "hallelujah",
+    "title": "Hallelujah (Live at Bearsville)",
+    "file": "Jeff Buckley - Hallelujah (Live at Bearsville) - 1993.m4a",
+    "artist": "Jeff Buckley",
+    "year": 1993,
+    "duration": "389",
+    "url": "https://www.youtube.com/watch?v=y8AWFf7EAc4"
   }
 ]
