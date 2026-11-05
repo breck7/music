@@ -285,5 +285,14 @@ const catalog = [
     "year": 1993,
     "duration": "389",
     "url": "https://www.youtube.com/watch?v=y8AWFf7EAc4"
+  },
+  {
+    "id": "wagon-wheel",
+    "title": "Wagon Wheel (Live at the Grand Ole Opry)",
+    "file": "Old Crow Medicine Show - Wagon Wheel (Live at the Grand Ole Opry) - 2024.m4a",
+    "artist": "Old Crow Medicine Show",
+    "year": 2024,
+    "duration": "303",
+    "url": "https://www.youtube.com/watch?v=ph_4nDOlPiI"
   }
 ]
