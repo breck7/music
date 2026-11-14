@@ -35,6 +35,7 @@ metaTags
 // One Day More: 2026 state-dinner clip, per supplied article and file comment. Performed by U.S. Army Chorus, confirmed by the collection owner.
 // Every Picture Tells a Story: Kerry Muzzey, from The Architect (2014); live performance recorded at AIR Lyndhurst with the Chamber Orchestra of London.
 // Bobcaygeon: The Tragically Hip, from Phantom Power (1998). The file's date tag (2009) is the upload date, not the release, so the year is the original 1998 release.
+// Sweet Melissa: YouTube https://www.youtube.com/watch?v=R5XJDxe7TVY (oEmbed and yt-dlp --dump-json --skip-download). Title as given on the video ("Sweet Melissa"); artist Allman Brothers Band from the video ("Allman Brothers") and the dropped filename. Duration 212s from ffprobe. The description is only "Made By : Jim Madonna 10/10/2010"; upload date 2010-10-11. Tags include "concert" and "live", but no performance year or venue is stated, so year is omitted.
 // SVG is inline because the installed Scroll compiler has no native SVG element parser.
 
 gitButton https://github.com/breck7/music
@@ -206,7 +207,7 @@ script
      data-artist="${song.artist}"
      data-title="${song.title}"
      data-song="${song.id}"
-     data-year="${song.year}"
+     data-year="${song.year || ""}"
      data-duration="${song.duration}">
      <span class="song-title">${song.title}</span>
      <span class="song-artist">${song.artist}</span>
@@ -257,7 +258,7 @@ script
      if (current < 0) return;
      const s = songs[current].dataset;
      $('now-title').textContent = `${audio.paused ? 'Ⅱ' : '▶'} ${s.title}`;
-     $('now-detail').textContent = autoplayBlocked ? 'Press play to start here' : `${s.artist} · ${s.year}`;
+     $('now-detail').textContent = autoplayBlocked ? 'Press play to start here' : (s.year ? `${s.artist} · ${s.year}` : s.artist);
      $('toggle').setAttribute('aria-label', audio.paused ? 'Play' : 'Pause');
    }
    async function play(index, startTime = null) {
