@@ -333,5 +333,13 @@
     "artist": "Billy Joel",
     "year": 1982,
     "duration": "326"
+  },
+  {
+    "id": "brothers-in-arms",
+    "title": "Brothers in Arms",
+    "file": "Brothers in Arms - Dire Straights - 1985.m4a",
+    "artist": "Dire Straights",
+    "year": 1985,
+    "duration": "298"
   }
 ]
