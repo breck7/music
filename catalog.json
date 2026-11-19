@@ -325,5 +325,13 @@
     "file": "Say Yes - Elliott Smith.m4a",
     "artist": "Elliott Smith",
     "duration": "138"
+  },
+  {
+    "id": "goodnight-saigon",
+    "title": "Goodnight Saigon",
+    "file": "Goodnight Saigon - Billy Joel - 1982.m4a",
+    "artist": "Billy Joel",
+    "year": 1982,
+    "duration": "326"
   }
 ]
