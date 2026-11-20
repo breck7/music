@@ -341,5 +341,12 @@ const catalog = [
     "artist": "Dire Straights",
     "year": 1985,
     "duration": "298"
+  },
+  {
+    "id": "bohemian-rhapsody",
+    "title": "Bohemian Rhapsody",
+    "file": "Queen – Bohemian Rhapsody.m4a",
+    "artist": "Queen",
+    "duration": "357"
   }
 ]
